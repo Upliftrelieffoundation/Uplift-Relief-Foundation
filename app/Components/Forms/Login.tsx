@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -16,6 +16,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Loader2 } from "lucide-react";
+import { FcGoogle } from "react-icons/fc";
 import { createClient } from "@/utils/supabase/client";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
@@ -43,7 +44,7 @@ const Login = () => {
 
   const onSubmit = async (data: LoginFormValues) => {
     setIsLoading(true);
-    
+
     const { error } = await supabase.auth.signInWithPassword({
       email: data.email,
       password: data.password,
@@ -86,7 +87,32 @@ const Login = () => {
       </div>
 
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-5">
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          className="flex flex-col gap-5"
+        >
+          <Button
+            type="button"
+            variant="outline"
+            onClick={handleGoogleLogin}
+            disabled={isLoading}
+            className="w-full min-h-12 bg-transparent border border-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.05)] text-chalk font-medium rounded-full transition-all duration-300"
+          >
+            <FcGoogle />
+            Google
+          </Button>
+
+          <div className="relative my-2">
+            <div className="absolute inset-0 flex items-center">
+              <span className="w-full border-t border-[rgba(255,255,255,0.1)]" />
+            </div>
+            <div className="relative flex justify-center text-xs uppercase">
+              <span className="bg-bg-card px-2 text-type/60">
+                Or continue with
+              </span>
+            </div>
+          </div>
+
           <FormField
             control={form.control}
             name="email"
@@ -98,7 +124,7 @@ const Login = () => {
                 <FormControl>
                   <Input
                     placeholder="you@example.com"
-                    className="bg-[#0b1425] border-[rgba(255,255,255,0.1)] text-[#ffffff] placeholder:text-type/30 focus-visible:ring-[#c8a24e] focus-visible:border-transparent min-h-[3rem] px-4 py-3 [&:-webkit-autofill]:bg-[#0b1425] [&:-webkit-autofill]:text-[#ffffff] [&:-webkit-autofill]:shadow-[0_0_0_30px_#0b1425_inset] [&:-webkit-autofill]:-webkit-text-fill-color-white"
+                    className="bg-bg border-[rgba(255,255,255,0.1)] text-chalk placeholder:text-type/30 focus-visible:ring-gold focus-visible:border-transparent min-h-12 px-4 py-3 [&:-webkit-autofill]:bg-bg [&:-webkit-autofill]:text-chalk [&:-webkit-autofill]:shadow-[0_0_0_30px_#0b1425_inset] [&:-webkit-autofill]:-webkit-text-fill-color-white"
                     {...field}
                   />
                 </FormControl>
@@ -113,12 +139,12 @@ const Login = () => {
             render={({ field }) => (
               <FormItem className="flex flex-col gap-1.5">
                 <div className="flex justify-between items-center m-0 p-0">
-                  <FormLabel className="text-[#e4e4e0] font-semibold text-sm m-0 p-0">
+                  <FormLabel className="text-type font-semibold text-sm m-0 p-0">
                     Password
                   </FormLabel>
                   <Link
                     href="/forgot-password"
-                    className="text-xs text-[#c8a24e] hover:text-[#ddb963] transition-colors m-0 p-0"
+                    className="text-xs text-gold hover:text-gold-bright transition-colors m-0 p-0"
                   >
                     Forgot password?
                   </Link>
@@ -127,7 +153,7 @@ const Login = () => {
                   <Input
                     type="password"
                     placeholder="••••••••"
-                    className="bg-[#0b1425] border-[rgba(255,255,255,0.1)] text-[#ffffff] placeholder:text-[#e4e4e0]/30 focus-visible:ring-[#c8a24e] focus-visible:border-transparent min-h-[3rem] px-4 py-3 [&:-webkit-autofill]:bg-[#0b1425] [&:-webkit-autofill]:text-[#ffffff] [&:-webkit-autofill]:shadow-[0_0_0_30px_#0b1425_inset] [&:-webkit-autofill]:-webkit-text-fill-color-white"
+                    className="bg-bg border-[rgba(255,255,255,0.1)] text-chalk placeholder:text-type/30 focus-visible:ring-gold focus-visible:border-transparent min-h-12 px-4 py-3 [&:-webkit-autofill]:bg-bg [&:-webkit-autofill]:text-chalk [&:-webkit-autofill]:shadow-[0_0_0_30px_#0b1425_inset] [&:-webkit-autofill]:-webkit-text-fill-color-white"
                     {...field}
                   />
                 </FormControl>
@@ -139,7 +165,7 @@ const Login = () => {
           <Button
             type="submit"
             disabled={isLoading}
-            className="w-full min-h-[3rem] mt-2 bg-[#c8a24e] hover:bg-[#ddb963] text-[#0b1425] font-bold rounded-full transition-all duration-300 shadow-[0_6px_24px_rgba(200,162,78,0.25)] hover:shadow-[0_12px_32px_rgba(200,162,78,0.4)] hover:-translate-y-0.5 border-0"
+            className="w-full min-h-12 mt-2 bg-gold hover:bg-gold-bright text-bg font-bold rounded-full transition-all duration-300 shadow-[0_6px_24px_rgba(200,162,78,0.25)] hover:shadow-[0_12px_32px_rgba(200,162,78,0.4)] hover:-translate-y-0.5 border-0"
           >
             {isLoading ? (
               <Loader2 className="w-5 h-5 animate-spin" />
@@ -147,50 +173,14 @@ const Login = () => {
               "Sign In"
             )}
           </Button>
-
-          <div className="relative my-2">
-            <div className="absolute inset-0 flex items-center">
-              <span className="w-full border-t border-[rgba(255,255,255,0.1)]" />
-            </div>
-            <div className="relative flex justify-center text-xs uppercase">
-              <span className="bg-[#101d32] px-2 text-[#e4e4e0]/60">
-                Or continue with
-              </span>
-            </div>
-          </div>
-
-          <Button
-            type="button"
-            variant="outline"
-            onClick={handleGoogleLogin}
-            disabled={isLoading}
-            className="w-full min-h-[3rem] bg-transparent border border-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.05)] text-[#ffffff] font-medium rounded-full transition-all duration-300"
-          >
-            <svg
-              className="mr-2 h-4 w-4"
-              aria-hidden="true"
-              focusable="false"
-              data-prefix="fab"
-              data-icon="google"
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 488 512"
-            >
-              <path
-                fill="currentColor"
-                d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"
-              ></path>
-            </svg>
-            Google
-          </Button>
         </form>
       </Form>
 
-      <div className="text-center text-sm text-[#e4e4e0]/60 mt-2">
+      <div className="text-center text-sm text-type/60 mt-2">
         Don&apos;t have an account?{" "}
         <Link
           href="/register"
-          className="text-[#c8a24e] font-semibold hover:text-[#ddb963] transition-colors"
+          className="text-gold font-semibold hover:text-gold-bright transition-colors"
         >
           Create an account
         </Link>

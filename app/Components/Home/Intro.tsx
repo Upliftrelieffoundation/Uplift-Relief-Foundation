@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { ArrowRight, Users } from "lucide-react";
 export default function IntroSection() {
   return (
     <section className="intro" id="about">
@@ -17,15 +18,7 @@ export default function IntroSection() {
             </div>
             <div className="intro-float">
               <div className="intro-float-icon">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                  <circle cx="9" cy="7" r="4" />
-                </svg>
+                <Users />
               </div>
               <div>
                 <strong>500+</strong>
@@ -47,20 +40,8 @@ export default function IntroSection() {
               Founded by young changemakers in 2026, we believe compassion —
               when backed by relentless action — transforms entire communities.
             </p>
-            <Link
-              href="/about"
-              className="btn btn-outline"
-              style={{ marginTop: "1.5rem", marginBottom: "2rem" }}
-            >
-              Meet Our Team{" "}
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
+            <Link href="/about" className="flex items-center gap-2 border-2 rounded-full w-max py-4 px-5 text-primary hover:border-gold hover:text-gold transition mt-4">
+              Meet Our Team <ArrowRight />
             </Link>
             <div className="intro-stats">
               <div className="intro-stat">

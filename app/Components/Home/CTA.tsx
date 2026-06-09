@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight, Lock } from "lucide-react";
 
 export default function CtaSection() {
   return (
@@ -12,42 +13,27 @@ export default function CtaSection() {
         height={1080}
       />
       <div className="wrap">
-        <div className="cta-inner reveal">
-          <span className="eyebrow">Make a Real Difference</span>
-          <h2>
+        <div className="relative z-2 max-w-145 reveal">
+          <span className="text-gold-bright">Make a Real Difference</span>
+          <h2 className=" text-white mb-5">
             Don&apos;t Just Watch.
             <br />
             <em>Act Now.</em>
           </h2>
-          <p>
-            Your monthly contribution ensures we never say &quot;no&quot; to
-            an emergency rescue call or a child wanting to learn.
+          <p className="text-type-2 text-[1.0625rem] leading-[1.8] mb-10">
+            Your monthly contribution ensures we never say &quot;no&quot; to an
+            emergency rescue call or a child wanting to learn.
           </p>
-          <div className="cta-actions">
+          
+          <div className="flex flex-col items-start gap-4">
             <Link href="/donate" className="btn btn-gold btn-lg">
-              Become a Monthly Donor{" "}
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
+              Become a Monthly Donor <ArrowRight />
             </Link>
             <Link href="/donate" className="btn btn-ghost">
               Save an Injured Animal Today
             </Link>
-            <div className="cta-secure">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <rect x="3" y="11" width="18" height="11" rx="2" />
-                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-              </svg>
+            <div className="flex items-center gap-1.5 text-type-3 text-[0.75rem] font-medium mt-1">
+              <Lock />
               100% Secure · 80G Tax Exempt · Cancel Anytime
             </div>
           </div>

@@ -2,6 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import Link from "next/link";
 
+import { ArrowRight } from "lucide-react";
 export default function HeroSection() {
   return (
     <header className="hero">
@@ -37,15 +38,7 @@ export default function HeroSection() {
         </p>
         <div className="hero-ctas">
           <Link href="/donate" className="btn btn-gold btn-lg">
-            Become a Monthly Donor{" "}
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
+            Become a Monthly Donor <ArrowRight />
           </Link>
           <Link href="/work" className="btn btn-ghost btn-lg">
             Join Rescue Missions

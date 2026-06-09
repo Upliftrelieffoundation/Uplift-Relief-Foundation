@@ -1,6 +1,30 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { ArrowRight } from "lucide-react";
+const causes = [
+  {
+    tag: "Animal Welfare",
+    title: "Save an Injured Animal",
+    description:
+      "Every day, dozens of street dogs suffer from accidents, abuse, and disease. We provide 24/7 emergency rescue, life-saving surgeries, and safe rehabilitation.",
+    img: "/images/dog_rescue.png",
+    imgAlt: "Street dog rescue",
+    btnLabel: "Feed a Street Animal",
+    revealDelay: "",
+  },
+  {
+    tag: "Child Education",
+    title: "Sponsor a Child\u2019s Education",
+    description:
+      "Poverty forces brilliant minds out of school. We provide free tuition, supplies, and mentorship so every child gets a fair start.",
+    img: "/images/children_class.png",
+    imgAlt: "Free education centre",
+    btnLabel: "Sponsor a Student",
+    revealDelay: " reveal-d1",
+  },
+];
+
 export default function CausesSection() {
   return (
     <section className="causes" id="causes">
@@ -14,80 +38,31 @@ export default function CausesSection() {
           </h2>
         </div>
         <div className="causes-row">
-          <div className="cause reveal">
-            <div className="cause-img">
-              <Image
-                src="/images/dog_rescue.png"
-                alt="Street dog rescue"
-                width={600}
-                height={400}
-              />
-              <div className="cause-tag">Animal Welfare</div>
-            </div>
-            <div className="cause-body">
-              <h3>Save an Injured Animal</h3>
-              <p>
-                Every day, dozens of street dogs suffer from accidents, abuse,
-                and disease. We provide 24/7 emergency rescue, life-saving
-                surgeries, and safe rehabilitation.
-              </p>
+          {causes.map((cause, i) => (
+            <div className={`cause reveal${cause.revealDelay}`} key={i}>
+              <div className="cause-img">
+                <Image
+                  src={cause.img}
+                  alt={cause.imgAlt}
+                  width={600}
+                  height={400}
+                />
+                <div className="cause-tag">{cause.tag}</div>
+              </div>
+              <div className="cause-body">
+                <h3>{cause.title}</h3>
+                <p>{cause.description}</p>
 
-              <Link href="/donate" className="btn btn-outline">
-                Feed a Street Animal{" "}
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </Link>
+                <Link href="/donate" className="btn btn-outline">
+                  {cause.btnLabel} <ArrowRight />
+                </Link>
+              </div>
             </div>
-          </div>
-          <div className="cause reveal reveal-d1">
-            <div className="cause-img">
-              <Image
-                src="/images/children_class.png"
-                alt="Free education centre"
-                width={600}
-                height={400}
-              />
-              <div className="cause-tag">Child Education</div>
-            </div>
-            <div className="cause-body">
-              <h3>Sponsor a Child&apos;s Education</h3>
-              <p>
-                Poverty forces brilliant minds out of school. We provide free
-                tuition, supplies, and mentorship so every child gets a fair
-                start.
-              </p>
-
-              <Link href="/donate" className="btn btn-outline">
-                Sponsor a Student{" "}
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-          </div>
+          ))}
         </div>
-        <div style={{ textAlign: "center", marginTop: "4rem" }}>
+        <div className="text-center mt-16">
           <Link href="/work" className="btn btn-gold btn-lg">
-            Explore All Our Work{" "}
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
+            Explore All Our Work <ArrowRight />
           </Link>
         </div>
       </div>

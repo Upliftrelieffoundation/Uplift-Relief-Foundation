@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
+import { QrCode, CreditCard, Landmark, Check, Shield, Users, ChevronDown } from "lucide-react";
 
 export default function DonateFormSection() {
   const [donationMode, setDonationMode] = useState<"monthly" | "onetime">("monthly");
@@ -35,7 +36,7 @@ export default function DonateFormSection() {
     setActiveTierId("");
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.SubmitEvent) => {
     e.preventDefault();
     const formattedAmt = Number(amount).toLocaleString("en-IN");
     const typeText = donationMode === "monthly" ? "/month" : " (one-time)";
@@ -50,7 +51,7 @@ export default function DonateFormSection() {
   };
 
   return (
-    <section className="intro" style={{ paddingTop: "4rem", background: "var(--ivory)" }}>
+    <section className="intro pt-16 bg-[var(--ivory)]">
       <div className="wrap">
         <div className="donate-grid">
           {/* Left Column: Interactive Form Panel */}
@@ -87,7 +88,7 @@ export default function DonateFormSection() {
                             <span className="tier-title">Animal Friend</span>
                             <span className="tier-price">
                               ₹500
-                              <span style={{ fontSize: "0.875rem", fontWeight: 400, color: "var(--type-3)" }}>
+                              <span className="text-sm font-normal text-[var(--type-3)]">
                                 /mo
                               </span>
                             </span>
@@ -103,7 +104,7 @@ export default function DonateFormSection() {
                             <span className="tier-title">Child Sponsor</span>
                             <span className="tier-price">
                               ₹1,200
-                              <span style={{ fontSize: "0.875rem", fontWeight: 400, color: "var(--type-3)" }}>
+                              <span className="text-sm font-normal text-[var(--type-3)]">
                                 /mo
                               </span>
                             </span>
@@ -119,7 +120,7 @@ export default function DonateFormSection() {
                             <span className="tier-title">Rescue Hero</span>
                             <span className="tier-price">
                               ₹3,000
-                              <span style={{ fontSize: "0.875rem", fontWeight: 400, color: "var(--type-3)" }}>
+                              <span className="text-sm font-normal text-[var(--type-3)]">
                                 /mo
                               </span>
                             </span>
@@ -180,10 +181,10 @@ export default function DonateFormSection() {
                       </div>
                     </div>
 
-                    <hr style={{ border: 0, borderTop: "1px solid var(--line)", margin: "2rem 0" }} />
+                    <hr className="border-0 border-t border-[var(--line)] my-8" />
 
                     {/* Contact Info */}
-                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+                    <div className="grid grid-cols-2 gap-4">
                       <div className="form-group">
                         <label htmlFor="donor-name">Full Name</label>
                         <input
@@ -210,7 +211,7 @@ export default function DonateFormSection() {
                       </div>
                     </div>
 
-                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+                    <div className="grid grid-cols-2 gap-4">
                       <div className="form-group">
                         <label htmlFor="donor-phone">Phone Number</label>
                         <input
@@ -238,30 +239,21 @@ export default function DonateFormSection() {
                         className={`payment-method-btn ${paymentMethod === "upi" ? "active" : ""}`}
                         onClick={() => setPaymentMethod("upi")}
                       >
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <rect x="2" y="5" width="20" height="14" rx="2" />
-                          <path d="M2 10h20" />
-                          <circle cx="6" cy="14" r="1" />
-                        </svg>
+                        <QrCode />
                         <span>UPI / QR Code</span>
                       </div>
                       <div
                         className={`payment-method-btn ${paymentMethod === "card" ? "active" : ""}`}
                         onClick={() => setPaymentMethod("card")}
                       >
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <rect x="2" y="5" width="20" height="14" rx="2" />
-                          <path d="M2 10h20" />
-                        </svg>
+                        <CreditCard />
                         <span>Credit/Debit Card</span>
                       </div>
                       <div
                         className={`payment-method-btn ${paymentMethod === "bank" ? "active" : ""}`}
                         onClick={() => setPaymentMethod("bank")}
                       >
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <path d="M3 22h18M6 18h12M4 10h16M12 2L4 6v4h16V6L12 2z" />
-                        </svg>
+                        <Landmark />
                         <span>Net Banking</span>
                       </div>
                     </div>
@@ -271,14 +263,9 @@ export default function DonateFormSection() {
                       <div id="method-upi-section">
                         <div className="qr-container">
                           <div className="qr-code">
-                            <svg width="150" height="150" viewBox="0 0 29 29" style={{ background: "#fff" }}>
-                              <path
-                                d="M0 0h7v7H0zm1 1v5h5V1zm1 1h3v3H2zm20-2h7v7h-7zm1 1v5h5V1zm1 1h3v3h-3zM0 22h7v7H0zm1 1v5h5V23zm1 1h3v3H2zm8-22h2v4h-2zm0 6h2v3h-2zm4-6h2v2h-2zm0 4h2v2h-2zm4-4h2v3h-2zm-8 8h4v2h-4zm6 0h3v2h-3zm-6 4h2v4h-2zm4 0h4v2h-4zm0 3v1h1v1h-2v-2zm7-7h2v2h-2zm-3 3h2v2h-2zm3 1h2v3h-2zm-3 2h2v2h-2zm-4 2h2v2h-2zm6 2h3v1h-3zm-3 2h2v2h-2zm5-1v2h2v-2zm-2-2h1v1h-1zM9 9h2v2H9zm2 2h2v2h-2zm-2 2h2v2H9zm2-4h2v2h-2zm2 2h2v2h-2zm2 2h2v2h-2z"
-                                fill="#0B1425"
-                              />
-                            </svg>
+                            <QrCode size={150} className="bg-white p-2" />
                           </div>
-                          <p style={{ fontSize: "0.875rem", color: "var(--type-2)" }}>
+                          <p className="text-sm text-[var(--type-2)]">
                             Scan the QR Code using any UPI App (GPay, PhonePe, Paytm)
                           </p>
                           <div className="qr-upi-id">UPI ID: upliftrelief@upi</div>
@@ -298,7 +285,7 @@ export default function DonateFormSection() {
                             placeholder="4111 2222 3333 4444"
                           />
                         </div>
-                        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+                        <div className="grid grid-cols-2 gap-4">
                           <div className="form-group">
                             <label htmlFor="card-expiry">Expiry Date</label>
                             <input type="text" id="card-expiry" className="form-input" placeholder="MM/YY" />
@@ -316,32 +303,29 @@ export default function DonateFormSection() {
                       <div id="method-bank-section">
                         <div className="form-group">
                           <label htmlFor="bank-select">Select Your Bank</label>
-                          <select
-                            id="bank-select"
-                            className="form-input"
-                            style={{
-                              WebkitAppearance: "none",
-                              backgroundImage:
-                                "url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2224%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23C8A24E%22 stroke-width=%222%22><path d=%22M6 9l6 6 6-6%22/></svg>')",
-                              backgroundRepeat: "no-repeat",
-                              backgroundPosition: "right 1.25rem center",
-                              backgroundSize: "16px",
-                            }}
-                          >
-                            <option value="sbi">State Bank of India</option>
-                            <option value="hdfc">HDFC Bank</option>
-                            <option value="icici">ICICI Bank</option>
-                            <option value="axis">Axis Bank</option>
-                            <option value="kotak">Kotak Mahindra Bank</option>
-                          </select>
+                          <div className="relative">
+                            <select
+                              id="bank-select"
+                              className="form-input appearance-none"
+                            >
+                              <option value="sbi">State Bank of India</option>
+                              <option value="hdfc">HDFC Bank</option>
+                              <option value="icici">ICICI Bank</option>
+                              <option value="axis">Axis Bank</option>
+                              <option value="kotak">Kotak Mahindra Bank</option>
+                            </select>
+                            <ChevronDown
+                              size={16}
+                              className="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-[var(--gold,#C8A24E)]"
+                            />
+                          </div>
                         </div>
                       </div>
                     )}
 
                     <button
                       type="submit"
-                      className="btn btn-gold btn-lg"
-                      style={{ width: "100%", justifyContent: "center", marginTop: "2rem" }}
+                      className="btn btn-gold btn-lg w-full justify-center mt-8"
                     >
                       Complete Secure Donation
                     </button>
@@ -351,21 +335,11 @@ export default function DonateFormSection() {
             ) : (
               /* Success Screen */
               <div
-                className="success-screen"
+                className="success-screen flex"
                 id="success-screen-section"
-                style={{ display: "flex" }}
               >
                 <div className="success-icon">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="3"
-                    width="28"
-                    height="28"
-                  >
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
+                  <Check size={28} strokeWidth={3} />
                 </div>
                 <h3>{successMessage.title}</h3>
                 <p>{successMessage.message}</p>
@@ -380,52 +354,41 @@ export default function DonateFormSection() {
           <div className="donate-sidebar reveal reveal-d1">
             <div className="sidebar-box">
               <h4>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                </svg>
+                <Shield />
                 Why Support Us?
               </h4>
               <p>Uplift Relief Foundation is a grassroots NGO built on relentless action and transparency.</p>
               <ul className="sidebar-bullets">
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                  <span>
+                <Check />
+                <span>
                     <strong>80G Tax Exemption:</strong> Get 50% tax deductions on your donations.
                   </span>
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                  <span>
+                <Check />
+                <span>
                     <strong>100% Transparent:</strong> Every rupee is tracked and audited monthly.
                   </span>
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                  <span>
+                <Check />
+                <span>
                     <strong>Cancel Anytime:</strong> Easily manage or cancel memberships from your dashboard.
                   </span>
                 </li>
               </ul>
             </div>
 
-            <div className="sidebar-box" style={{ background: "var(--navy)", color: "var(--chalk)", border: "none" }}>
-              <h4 style={{ color: "var(--gold)" }}>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                  <circle cx="9" cy="7" r="4" />
-                </svg>
+            <div className="sidebar-box bg-[var(--navy)] text-[var(--chalk)] border-0">
+              <h4 className="text-[var(--gold)]">
+                <Users />
                 Donor Care
               </h4>
-              <p style={{ color: "var(--type-2)" }}>
+              <p className="text-[var(--type-2)]">
                 Need help with your donation or certificates? Get in touch with our support desk.
               </p>
-              <p style={{ marginBottom: 0, fontWeight: 600, color: "var(--gold-pale)" }}>
+              <p className="mb-0 font-semibold text-[var(--gold-pale)]">
                 Email: billing@upliftrelief.org
                 <br />
                 Phone: +91 98765 43210

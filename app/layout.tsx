@@ -3,6 +3,7 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { GlobalScrollObserver } from "@/components/GlobalScrollObserver";
+import React from "react";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.upliftfoundation.org';
 
@@ -82,6 +83,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <title>Uplift Relief Foundation</title>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}

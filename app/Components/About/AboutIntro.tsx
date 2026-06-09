@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Users } from "lucide-react";
 
 export default function AboutIntroSection() {
   return (
@@ -16,15 +17,7 @@ export default function AboutIntroSection() {
             </div>
             <div className="intro-float">
               <div className="intro-float-icon">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                  <circle cx="9" cy="7" r="4" />
-                </svg>
+                <Users />
               </div>
               <div>
                 <strong>500+</strong>

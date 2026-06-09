@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export default function StoriesSection() {
   return (
@@ -33,14 +34,7 @@ export default function StoriesSection() {
               </p>
               <Link href="#" className="s-link">
                 Read Full Story{" "}
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
+                <ArrowRight />
               </Link>
             </div>
           </div>
@@ -61,14 +55,7 @@ export default function StoriesSection() {
               </p>
               <Link href="#" className="s-link">
                 Read Full Story{" "}
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
+                <ArrowRight />
               </Link>
             </div>
           </div>
@@ -88,33 +75,18 @@ export default function StoriesSection() {
               </p>
               <Link href="#" className="s-link">
                 Read Full Story{" "}
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
+                <ArrowRight />
               </Link>
             </div>
           </div>
         </div>
-        <div style={{ textAlign: "center", marginTop: "4rem" }}>
+        <div className="text-center mt-16">
           <Link
             href="/stories"
-            className="btn btn-outline"
-            style={{ borderColor: "rgba(255,255,255,0.2)", color: "white" }}
+            className="btn btn-outline border-white/20 text-white"
           >
             Read All Stories{" "}
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
+            <ArrowRight />
           </Link>
         </div>
       </div>

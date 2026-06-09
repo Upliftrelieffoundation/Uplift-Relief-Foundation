@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export default function StoriesList() {
   return (
@@ -32,9 +33,7 @@ export default function StoriesList() {
               </p>
               <Link href="#" className="s-link">
                 Read Full Story{" "}
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
+                <ArrowRight />
               </Link>
             </div>
           </div>
@@ -54,9 +53,7 @@ export default function StoriesList() {
               </p>
               <Link href="#" className="s-link">
                 Read Full Story{" "}
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
+                <ArrowRight />
               </Link>
             </div>
           </div>
@@ -76,9 +73,7 @@ export default function StoriesList() {
               </p>
               <Link href="#" className="s-link">
                 Read Full Story{" "}
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
+                <ArrowRight />
               </Link>
             </div>
           </div>

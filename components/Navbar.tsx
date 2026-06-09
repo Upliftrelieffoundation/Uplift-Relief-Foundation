@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+import { ArrowRight } from "lucide-react";
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -34,18 +35,18 @@ export function Navbar() {
           style={
             menuOpen
               ? {
-                display: "flex",
-                flexDirection: "column",
-                position: "absolute",
-                top: "100%",
-                left: "0",
-                right: "0",
-                background: "var(--bg)",
-                padding: "1.5rem 2rem",
-                gap: "1rem",
-                boxShadow: "0 12px 32px rgba(0,0,0,.3)",
-                zIndex: 99,
-              }
+                  display: "flex",
+                  flexDirection: "column",
+                  position: "absolute",
+                  top: "100%",
+                  left: "0",
+                  right: "0",
+                  background: "var(--bg)",
+                  padding: "1.5rem 2rem",
+                  gap: "1rem",
+                  boxShadow: "0 12px 32px rgba(0,0,0,.3)",
+                  zIndex: 99,
+                }
               : {}
           }
         >
@@ -54,7 +55,10 @@ export function Navbar() {
           <Link href="/work">Our Work</Link>
           <Link href="/impact">Impact</Link>
           <Link href="/stories">Stories</Link>
-          <Link href="/login" className='text-gold hover:text-gold/80 transition'>
+          <Link
+            href="/login"
+            className="text-gold hover:text-gold/80 transition"
+          >
             Login
           </Link>
         </div>
@@ -64,28 +68,20 @@ export function Navbar() {
           style={
             menuOpen
               ? {
-                display: "flex",
-                position: "absolute",
-                top: "calc(100% + 220px)",
-                left: "0",
-                right: "0",
-                background: "var(--bg)",
-                padding: "0 2rem 1.5rem",
-                zIndex: 99,
-              }
+                  display: "flex",
+                  position: "absolute",
+                  top: "calc(100% + 220px)",
+                  left: "0",
+                  right: "0",
+                  background: "var(--bg)",
+                  padding: "0 2rem 1.5rem",
+                  zIndex: 99,
+                }
               : {}
           }
         >
           <Link href="/donate" className="btn btn-gold">
-            Donate Now{" "}
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
+            Donate Now <ArrowRight />
           </Link>
         </div>
 
