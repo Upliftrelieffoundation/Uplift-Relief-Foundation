@@ -16,6 +16,9 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Loader2 } from "lucide-react";
+import { createClient } from "@/utils/supabase/client";
+import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 const registerSchema = z
   .object({
@@ -34,6 +37,9 @@ type RegisterFormValues = z.infer<typeof registerSchema>;
 const Register = () => {
   const [isLoading, setIsLoading] = useState(false);
 
+  const supabase = createClient();
+  const router = useRouter();
+
   const form = useForm<RegisterFormValues>({
     resolver: zodResolver(registerSchema),
     defaultValues: {
@@ -46,16 +52,45 @@ const Register = () => {
 
   const onSubmit = async (data: RegisterFormValues) => {
     setIsLoading(true);
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    console.log("Register data:", data);
+    
+    const { error } = await supabase.auth.signUp({
+      email: data.email,
+      password: data.password,
+      options: {
+        data: {
+          full_name: data.name,
+        },
+      },
+    });
+
     setIsLoading(false);
+
+    if (error) {
+      toast.error(error.message || "Failed to create account");
+      return;
+    }
+
+    toast.success("Registration successful! Please check your email to verify your account.");
+    router.push("/login");
+  };
+
+  const handleGoogleLogin = async () => {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: "google",
+      options: {
+        redirectTo: `${window.location.origin}/auth/callback`,
+      },
+    });
+
+    if (error) {
+      toast.error(error.message || "Failed to sign in with Google");
+    }
   };
 
   return (
-    <div className="w-full max-w-md mx-auto bg-[#101d32] border border-[rgba(255,255,255,0.07)] p-8 rounded-2xl shadow-2xl flex flex-col gap-6">
+    <div className="w-full max-w-md mx-auto bg-bg-card border border-line p-8 rounded-2xl shadow-2xl flex flex-col gap-6 pt-10">
       <div className="text-center flex flex-col gap-2">
-        <div className="text-[1.875rem] font-bold text-[#ffffff] font-['Play'] tracking-tight leading-none m-0">
+        <div className="text-[1.875rem] font-bold text-chalk font-['Play'] tracking-tight leading-none m-0">
           Create Account
         </div>
         <p className="text-[#e4e4e0]/60 text-sm m-0">
@@ -157,6 +192,42 @@ const Register = () => {
             ) : (
               "Create Account"
             )}
+          </Button>
+
+          <div className="relative my-2">
+            <div className="absolute inset-0 flex items-center">
+              <span className="w-full border-t border-[rgba(255,255,255,0.1)]" />
+            </div>
+            <div className="relative flex justify-center text-xs uppercase">
+              <span className="bg-[#101d32] px-2 text-[#e4e4e0]/60">
+                Or continue with
+              </span>
+            </div>
+          </div>
+
+          <Button
+            type="button"
+            variant="outline"
+            onClick={handleGoogleLogin}
+            disabled={isLoading}
+            className="w-full min-h-[3rem] bg-transparent border border-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.05)] text-[#ffffff] font-medium rounded-full transition-all duration-300"
+          >
+            <svg
+              className="mr-2 h-4 w-4"
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fab"
+              data-icon="google"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 488 512"
+            >
+              <path
+                fill="currentColor"
+                d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"
+              ></path>
+            </svg>
+            Google
           </Button>
         </form>
       </Form>
