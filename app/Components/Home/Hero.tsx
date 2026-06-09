@@ -16,10 +16,10 @@ export default function HeroSection() {
       />
       <div className="wrap hero-wrap">
         <div className="hero-badge">
-          {/* <span className="dot"></span> */}
-          {/* <span>Registered NGO · Nagpur, India</span> */}
-          <Badge variant={"default"} className="gap-2 p-3! bg-navy/80 text-sm">
-            <span className="w-2 h-2 rounded-full bg-white/90" />
+          {/* <span className="dot"></span> 
+          <span>Registered NGO · Nagpur, India</span> */}
+          <Badge variant={"default"} className="gap-2 p-3! bg-white/5 text-sm">
+            <span className="dot" />
             <span className="text-white/90">
               Registered NGO · Nagpur, India
             </span>

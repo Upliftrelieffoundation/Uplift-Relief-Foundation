@@ -45,8 +45,7 @@ export default function IntroSection() {
             </p>
             <p className="body-lg">
               Founded by young changemakers in 2026, we believe compassion —
-              when backed by relentless action — transforms entire
-              communities.
+              when backed by relentless action — transforms entire communities.
             </p>
             <Link
               href="/about"
