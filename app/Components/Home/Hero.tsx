@@ -1,3 +1,4 @@
+import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -15,8 +16,14 @@ export default function HeroSection() {
       />
       <div className="wrap hero-wrap">
         <div className="hero-badge">
-          <span className="dot"></span>
-          <span>Registered NGO · Nagpur, India</span>
+          {/* <span className="dot"></span> */}
+          {/* <span>Registered NGO · Nagpur, India</span> */}
+          <Badge variant={"default"} className="gap-2 p-3! bg-navy/80 text-sm">
+            <span className="w-2 h-2 rounded-full bg-white/90" />
+            <span className="text-white/90">
+              Registered NGO · Nagpur, India
+            </span>
+          </Badge>
         </div>
         <h1 className="hero-h1">
           जीवनम् उद्धर।
