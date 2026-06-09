@@ -30,9 +30,9 @@ export default function CtaSection() {
               Become a Monthly Donor <ArrowRight />
             </Link>
             <Link href="/donate" className="btn btn-ghost">
-              Save an Injured Animal Today
+              Save an Injured Animal Today <ArrowRight/>
             </Link>
-            <div className="flex items-center gap-1.5 text-type-3 text-[0.75rem] font-medium mt-1">
+            <div className="flex items-center justify-between gap-1.5 text-gray-500 text-[0.75rem] font-medium mt-1">
               <Lock />
               100% Secure · 80G Tax Exempt · Cancel Anytime
             </div>

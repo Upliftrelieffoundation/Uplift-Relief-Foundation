@@ -421,7 +421,7 @@
 	}
 
 	.hero-ctas {
-		@apply flex flex-col sm:flex-row gap-3;
+		@apply flex gap-3 flex-wrap;
 		margin-bottom: clamp(3rem, 6vh, 5rem);
 	}
 
@@ -1408,7 +1408,7 @@
 		}
 
 		.hero-ctas {
-			@apply flex-col;
+			@apply flex flex-row;
 		}
 
 		.hero-ctas .btn {

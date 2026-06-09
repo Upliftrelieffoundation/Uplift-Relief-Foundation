@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Copyright, Mail, MapPin, Phone } from "lucide-react";
 import { BsInstagram, BsLinkedin, BsTwitterX } from "react-icons/bs";
 import { GrYoutube } from "react-icons/gr";
 export function Footer() {
@@ -15,13 +15,13 @@ export function Footer() {
               alt="Uplift Relief Foundation"
               width={160}
               height={44}
-              className="w-auto h-44"
+              className="w-auto h-22"
             />
             <p>
               A grassroots NGO rescuing street animals and educating
               underprivileged children across India. Nagpur since 2026.
             </p>
-            <div className="footer-trust">
+            <div className=" mt-5 p-4 bg-[rgba(255,255,255,0.03)] border border-line rounded-xl text-sm">
               <p>
                 Registered under the Societies Registration Act. Reg No:
                 MAH/564/2026/NAGPUR. Donations eligible for 80G tax exemption.
@@ -86,8 +86,8 @@ export function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; 2026 Uplift Relief Foundation. All rights reserved.</p>
-          <div className="socials">
+          <p className="flex items-center gap-2 text-gray-500"><Copyright size={18} /> 2026 Uplift Relief Foundation. All rights reserved.</p>
+          <div className="flex gap-5 justify-between items-center ">
             <a href="#" aria-label="Instagram">
               <BsInstagram />
             </a>
@@ -98,7 +98,7 @@ export function Footer() {
               <BsLinkedin />
             </a>
             <a href="#" aria-label="YouTube">
-              <GrYoutube size={40}/>
+              <GrYoutube size={30} />
             </a>
           </div>
         </div>
