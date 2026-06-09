@@ -1,10 +1,10 @@
 import { TrustRibbon } from "@/components/TrustRibbon";
-import HeroSection from "./Components/Home/HeroSection";
-import IntroSection from "./Components/Home/IntroSection";
-import CausesSection from "./Components/Home/CausesSection";
-import StoriesSection from "./Components/Home/StoriesSection";
-import ImpactSection from "./Components/Home/ImpactSection";
-import CtaSection from "./Components/Home/CtaSection";
+import HeroSection from "./Components/Home/Hero";
+import IntroSection from "./Components/Home/Intro";
+import CausesSection from "./Components/Home/Causes";
+import StoriesSection from "./Components/Home/Stories";
+import ImpactSection from "./Components/Home/Impact";
+import CtaSection from "./Components/Home/CTA";
 
 export default function Home() {
   return (

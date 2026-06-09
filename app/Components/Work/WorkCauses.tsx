@@ -1,0 +1,115 @@
+import Image from "next/image";
+import Link from "next/link";
+
+export default function WorkCausesSection() {
+  return (
+    <section className="causes" id="causes">
+      <div className="wrap">
+        <div className="causes-header reveal">
+          <span className="eyebrow">Where Your Support Goes</span>
+          <h2>
+            Two Urgent Causes.<br />
+            <em>One Heart.</em>
+          </h2>
+        </div>
+        <div className="causes-row">
+          <div className="cause reveal">
+            <div className="cause-img">
+              <Image
+                src="/images/dog_rescue.png"
+                alt="Street dog rescue"
+                width={600}
+                height={400}
+              />
+              <div className="cause-tag">Animal Welfare</div>
+            </div>
+            <div className="cause-body">
+              <h3>Save an Injured Animal</h3>
+              <p>
+                Every day, dozens of street dogs suffer from accidents, abuse,
+                and disease. We provide 24/7 emergency rescue, life-saving
+                surgeries, and safe rehabilitation.
+              </p>
+              <ul className="cause-checks">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
+                  Emergency medical response
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
+                  Anti-rabies vaccination drives
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
+                  Adoption &amp; foster care
+                </li>
+              </ul>
+              <Link href="/donate" className="btn btn-outline">
+                Feed a Street Animal{" "}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+          <div className="cause reveal reveal-d1">
+            <div className="cause-img">
+              <Image
+                src="/images/children_class.png"
+                alt="Free education centre"
+                width={600}
+                height={400}
+              />
+              <div className="cause-tag">Child Education</div>
+            </div>
+            <div className="cause-body">
+              <h3>Sponsor a Child&apos;s Education</h3>
+              <p>
+                Poverty forces brilliant minds out of school. We provide free
+                tuition, supplies, and mentorship so every child gets a fair start.
+              </p>
+              <ul className="cause-checks">
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
+                  Free learning centres
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
+                  Books, uniforms &amp; digital literacy
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
+                  Career mentorship
+                </li>
+              </ul>
+              <Link href="/donate" className="btn btn-outline">
+                Sponsor a Student{" "}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
