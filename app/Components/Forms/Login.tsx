@@ -124,7 +124,7 @@ const Login = () => {
                 <FormControl>
                   <Input
                     placeholder="you@example.com"
-                    className="bg-bg border-[rgba(255,255,255,0.1)] text-chalk placeholder:text-type/30 focus-visible:ring-gold focus-visible:border-transparent min-h-12 px-4 py-3 [&:-webkit-autofill]:bg-bg [&:-webkit-autofill]:text-chalk [&:-webkit-autofill]:shadow-[0_0_0_30px_#0b1425_inset] [&:-webkit-autofill]:-webkit-text-fill-color-white"
+                    className="bg-bg border-[rgba(255,255,255,0.1)] text-chalk placeholder:text-white/50 focus-visible:ring-gold focus-visible:border-transparent min-h-12 px-4 py-3 [&:-webkit-autofill]:bg-bg [&:-webkit-autofill]:text-chalk [&:-webkit-autofill]:shadow-[0_0_0_30px_#0b1425_inset] [&:-webkit-autofill]:-webkit-text-fill-color-white"
                     {...field}
                   />
                 </FormControl>
@@ -153,7 +153,7 @@ const Login = () => {
                   <Input
                     type="password"
                     placeholder="••••••••"
-                    className="bg-bg border-[rgba(255,255,255,0.1)] text-chalk placeholder:text-type/30 focus-visible:ring-gold focus-visible:border-transparent min-h-12 px-4 py-3 [&:-webkit-autofill]:bg-bg [&:-webkit-autofill]:text-chalk [&:-webkit-autofill]:shadow-[0_0_0_30px_#0b1425_inset] [&:-webkit-autofill]:-webkit-text-fill-color-white"
+                    className="bg-bg border-[rgba(255,255,255,0.1)] text-chalk placeholder:text-white/50 focus-visible:ring-gold focus-visible:border-transparent min-h-12 px-4 py-3 [&:-webkit-autofill]:bg-bg [&:-webkit-autofill]:text-chalk [&:-webkit-autofill]:shadow-[0_0_0_30px_#0b1425_inset] [&:-webkit-autofill]:-webkit-text-fill-color-white"
                     {...field}
                   />
                 </FormControl>

@@ -30,63 +30,31 @@ export function Navbar() {
           />
         </Link>
 
-        <div
-          className="nav-menu"
-          style={
-            menuOpen
-              ? {
-                  display: "flex",
-                  flexDirection: "column",
-                  position: "absolute",
-                  top: "100%",
-                  left: "0",
-                  right: "0",
-                  background: "var(--bg)",
-                  padding: "1.5rem 2rem",
-                  gap: "1rem",
-                  boxShadow: "0 12px 32px rgba(0,0,0,.3)",
-                  zIndex: 99,
-                }
-              : {}
-          }
-        >
-          <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
-          <Link href="/work">Our Work</Link>
-          <Link href="/impact">Impact</Link>
-          <Link href="/stories">Stories</Link>
-          <Link
-            href="/login"
-            className="text-gold hover:text-gold/80 transition"
-          >
-            Login
-          </Link>
-        </div>
+        <div className={`nav-collapse ${menuOpen ? "open" : ""}`}>
+          <div className="nav-menu">
+            <Link href="/" onClick={() => setMenuOpen(false)}>Home</Link>
+            <Link href="/about" onClick={() => setMenuOpen(false)}>About</Link>
+            <Link href="/work" onClick={() => setMenuOpen(false)}>Our Work</Link>
+            <Link href="/impact" onClick={() => setMenuOpen(false)}>Impact</Link>
+            <Link href="/stories" onClick={() => setMenuOpen(false)}>Stories</Link>
+            <Link
+              href="/login"
+              className="text-gold hover:text-gold/80 transition"
+              onClick={() => setMenuOpen(false)}
+            >
+              Login
+            </Link>
+          </div>
 
-        <div
-          className="nav-cta"
-          style={
-            menuOpen
-              ? {
-                  display: "flex",
-                  position: "absolute",
-                  top: "calc(100% + 220px)",
-                  left: "0",
-                  right: "0",
-                  background: "var(--bg)",
-                  padding: "0 2rem 1.5rem",
-                  zIndex: 99,
-                }
-              : {}
-          }
-        >
-          <Link href="/donate" className="btn btn-gold">
-            Donate Now <ArrowRight />
-          </Link>
+          <div className="nav-cta">
+            <Link href="/donate" className="btn btn-gold" onClick={() => setMenuOpen(false)}>
+              Donate Now <ArrowRight />
+            </Link>
+          </div>
         </div>
 
         <button
-          className="hamburger"
+          className={`hamburger ${menuOpen ? "open" : ""}`}
           id="ham"
           aria-label="Menu"
           onClick={() => setMenuOpen(!menuOpen)}
