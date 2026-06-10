@@ -28,7 +28,7 @@ const causes = [
 export default function CausesSection() {
   return (
     <section className="bg-ivory max-lg:px-5 max-lg:py-10 lg:px-10 lg:py-20" id="causes">
-      <div className="wrap">
+      <div className="md:mx-20 lg:mx-20">
         <div className="max-w-140 mb-[clamp(3rem,5vw,4rem)] reveal">
           <span className="eyebrow text-gold-deep">Where Your Support Goes</span>
           <h2 className="text-navy">

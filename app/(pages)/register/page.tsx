@@ -12,7 +12,7 @@ export default function RegisterPage() {
       {/* Container that takes full height. Flex row to separate left and right. */}
       <div className="flex-1 w-full max-w-350 mx-auto px-5 md:px-[clamp(1.25rem,4%,2.5rem)] flex flex-col md:flex-row justify-between relative z-10 pt-24 md:pt-32 lg:pt-36 pb-12">
         {/* Left side register form - Vertically centered */}
-        <div className="w-full max-w-md relative z-10 md:ml-[2%] lg:ml-[5%] xl:ml-[8%] flex flex-col justify-center">
+        <div className="w-full max-w-md relative z-10 md:ml-[2%] lg:ml-[5%] xl:ml-[8%] pt-4 md:pt-0 flex flex-col justify-center">
           <Register />
         </div>
         {/* Right side text content - Top aligned */}

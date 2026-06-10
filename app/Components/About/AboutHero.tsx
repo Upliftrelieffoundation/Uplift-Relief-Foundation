@@ -7,7 +7,7 @@ export default function AboutHeroSection() {
         src="/images/volunteer_team.png"
         alt="Our team"
         className="page-hero-bg"
-        width={1920}
+        width={1820}
         height={1080}
         priority
       />

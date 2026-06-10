@@ -22,7 +22,7 @@ export default function LoginPage() {
           </h1>
         </div>
         {/* Right side login form - Vertically centered */}
-        <div className="w-full max-w-md relative z-10 md:mr-[2%] lg:mr-[5%] xl:mr-[8%] flex flex-col justify-center">
+        <div className="w-full max-w-md relative z-10 md:mr-[2%] lg:mr-[5%] xl:mr-[8%] pt-8 md:pt-0 flex flex-col justify-center">
           <Login />
         </div>
       </div>
