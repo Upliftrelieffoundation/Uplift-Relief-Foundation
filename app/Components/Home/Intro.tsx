@@ -33,13 +33,22 @@ export default function IntroSection() {
               A Foundation Built on <em>Compassion</em>
             </h2>
             <p className="body-lg text-[rgba(11,20,37,0.7)]!">
-              Uplift Relief Foundation is a grassroots NGO based in Nagpur
-              dedicated to rescuing street animals and empowering
-              underprivileged children through free education and life skills.
+              Uplift Relief Foundation is a grassroots NGO based in Nagpur, Maharashtra,
+              dedicated to two urgent causes: rescuing and rehabilitating injured street
+              animals, and providing free, quality education to underprivileged children
+              who would otherwise be denied the chance to learn.
             </p>
             <p className="body-lg text-[rgba(11,20,37,0.7)]!">
-              Founded by young changemakers in 2026, we believe compassion —
-              when backed by relentless action — transforms entire communities.
+              Our street dog rescue team operates 24/7 — responding to accidents, abuse cases,
+              and disease outbreaks across Nagpur. Every animal receives veterinary care,
+              shelter, and rehabilitation. In parallel, our free education centres give
+              children from slums and low-income families access to tuition, school supplies,
+              mentorship, and life-skills training.
+            </p>
+            <p className="body-lg text-[rgba(11,20,37,0.7)]!">
+              Founded by young changemakers in 2026, we believe compassion — when backed by
+              relentless action — transforms entire communities. 100% of public donations
+              go directly to our programs, with full transparency on every rupee spent.
             </p>
             <Link href="/about" className="btn btn-outline border-2 border-[rgba(11,20,37,0.15)] text-navy mt-8 self-start hover:border-navy hover:bg-[rgba(11,20,37,0.04)]">
               Meet Our Team <ArrowRight />
