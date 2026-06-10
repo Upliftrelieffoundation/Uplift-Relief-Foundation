@@ -85,23 +85,23 @@ export default function DonateFormSection() {
   };
 
   return (
-    <section className="intro pt-16 bg-(--ivory)">
+    <section className="bg-ivory max-lg:px-5 max-lg:py-10 lg:px-10 lg:py-20">
       <div className="wrap">
-        <div className="donate-grid">
+        <div className="grid items-start mt-12 gap-3 max-lg:grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] max-lg:gap-8">
           {/* Left Column: Interactive Form Panel */}
-          <div className="donate-panel reveal">
+          <div className="bg-bg-card border border-line rounded-3xl p-[clamp(1.5rem,4vw,3rem)] shadow-[0_12px_48px_rgba(0,0,0,0.15)] reveal">
             {!showSuccess ? (
               <>
                 {/* Tab Switchers */}
-                <div className="donate-header-tabs">
+                <div className="flex gap-2 bg-bg p-1.5 rounded-full mb-10 border border-white/10">
                   <button
-                    className={`donate-tab-btn ${donationMode === "monthly" ? "active" : ""}`}
+                    className={`flex-1 border-none bg-transparent text-white/60 font-semibold text-[0.9375rem] rounded-full cursor-pointer text-center font-sans p-3.5 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${donationMode === "monthly" ? "bg-gold text-bg shadow-[0_4px_12px_rgba(200,162,78,0.25)]" : ""}`}
                     onClick={() => handleTabSwitch("monthly")}
                   >
                     Monthly Member
                   </button>
                   <button
-                    className={`donate-tab-btn ${donationMode === "onetime" ? "active" : ""}`}
+                    className={`flex-1 border-none bg-transparent text-white/60 font-semibold text-[0.9375rem] rounded-full cursor-pointer text-center font-sans p-3.5 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${donationMode === "onetime" ? "bg-gold text-bg shadow-[0_4px_12px_rgba(200,162,78,0.25)]" : ""}`}
                     onClick={() => handleTabSwitch("onetime")}
                   >
                     One-Time Donation
@@ -175,22 +175,32 @@ export default function DonateFormSection() {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="form-group">
-                        <label htmlFor="donor-phone">Phone Number</label>
+                      <div className="flex flex-col gap-2 mb-5">
+                        <label
+                          htmlFor="donor-phone"
+                          className="text-[0.75rem] font-semibold uppercase tracking-[0.08em] text-white/60"
+                        >
+                          Phone Number
+                        </label>
                         <input
                           type="tel"
                           id="donor-phone"
-                          className="form-input"
+                          className="bg-[#152640] border border-white/10 rounded-xl text-white outline-none font-sans text-[0.9375rem] p-3.5 px-5 transition-colors duration-300 focus:border-gold"
                           placeholder="+91 98765 43210"
                           required
                         />
                       </div>
-                      <div className="form-group">
-                        <label htmlFor="donor-pan">PAN Number </label>
+                      <div className="flex flex-col gap-2 mb-5">
+                        <label
+                          htmlFor="donor-pan"
+                          className="text-[0.75rem] font-semibold uppercase tracking-[0.08em] text-white/60"
+                        >
+                          PAN Number{" "}
+                        </label>
                         <input
                           type="text"
                           id="donor-pan"
-                          className="form-input"
+                          className="bg-[#152640] border border-white/10 rounded-xl text-white outline-none font-sans text-[0.9375rem] p-3.5 px-5 transition-colors duration-300 focus:border-gold"
                           placeholder="ABCDE1234F"
                         />
                       </div>

@@ -17,29 +17,36 @@ export function PaymentSection({
   paymentMethod,
   onMethodChange,
 }: PaymentSectionProps) {
+const payBtnBase = "flex items-center justify-center gap-3 bg-[#152640] border border-white/10 rounded-2xl cursor-pointer text-white/60 p-4 transition-all duration-300 hover:border-navy-light hover:text-white";
+const payBtnActive = "border-gold text-white bg-[rgba(200,162,78,0.03)]";
+
+const formGroup = "flex flex-col gap-2 mb-5";
+const formLabel = "text-[0.75rem] font-semibold uppercase tracking-[0.08em] text-white/60";
+const formInput = "bg-[#152640] border border-white/10 rounded-xl text-white outline-none font-sans text-[0.9375rem] p-3.5 px-5 transition-colors duration-300 focus:border-gold";
+
   return (
     <>
       {/* Payment Method Switching */}
-      <div className="payment-methods">
+      <div className="flex flex-col md:flex-row gap-3 my-8">
         <div
-          className={`payment-method-btn ${paymentMethod === "upi" ? "active" : ""}`}
+          className={`${payBtnBase} flex-1 ${paymentMethod === "upi" ? payBtnActive : ""}`}
           onClick={() => onMethodChange("upi")}
         >
-          <QrCode />
+          <QrCode className="w-6 h-6 text-gold" />
           <span>UPI / QR Code</span>
         </div>
         <div
-          className={`payment-method-btn ${paymentMethod === "card" ? "active" : ""}`}
+          className={`${payBtnBase} flex-1 ${paymentMethod === "card" ? payBtnActive : ""}`}
           onClick={() => onMethodChange("card")}
         >
-          <CreditCard />
+          <CreditCard className="w-6 h-6 text-gold" />
           <span>Credit/Debit Card</span>
         </div>
         <div
-          className={`payment-method-btn ${paymentMethod === "bank" ? "active" : ""}`}
+          className={`${payBtnBase} flex-1 ${paymentMethod === "bank" ? payBtnActive : ""}`}
           onClick={() => onMethodChange("bank")}
         >
-          <Landmark />
+          <Landmark className="w-6 h-6 text-gold" />
           <span>Net Banking</span>
         </div>
       </div>
@@ -47,14 +54,14 @@ export function PaymentSection({
       {/* Method 1: UPI Section */}
       {paymentMethod === "upi" && (
         <div id="method-upi-section">
-          <div className="qr-container">
-            <div className="qr-code">
+          <div className="flex flex-col items-center text-center bg-[#152640] border border-white/10 rounded-2xl p-8 mt-4">
+            <div className="w-[180px] h-[180px] bg-white p-2.5 rounded-xl mb-4 flex items-center justify-center relative">
               <QrCode size={150} className="bg-white p-2" />
             </div>
-            <p className="text-sm text-[var(--type-2)]">
+            <p className="text-sm text-type-2">
               Scan the QR Code using any UPI App (GPay, PhonePe, Paytm)
             </p>
-            <div className="qr-upi-id">UPI ID: upliftrelief@upi</div>
+            <div className="text-gold-bright font-bold mt-2 font-heading text-[0.9375rem]">UPI ID: upliftrelief@upi</div>
           </div>
         </div>
       )}
@@ -62,23 +69,23 @@ export function PaymentSection({
       {/* Method 2: Card Section */}
       {paymentMethod === "card" && (
         <div id="method-card-section">
-          <div className="form-group">
-            <label htmlFor="card-number">Card Number</label>
+          <div className={formGroup}>
+            <label htmlFor="card-number" className={formLabel}>Card Number</label>
             <input
               type="text"
               id="card-number"
-              className="form-input"
+              className={formInput}
               placeholder="4111 2222 3333 4444"
             />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="form-group">
-              <label htmlFor="card-expiry">Expiry Date</label>
-              <input type="text" id="card-expiry" className="form-input" placeholder="MM/YY" />
+            <div className={formGroup}>
+              <label htmlFor="card-expiry" className={formLabel}>Expiry Date</label>
+              <input type="text" id="card-expiry" className={formInput} placeholder="MM/YY" />
             </div>
-            <div className="form-group">
-              <label htmlFor="card-cvv">CVV</label>
-              <input type="password" id="card-cvv" className="form-input" placeholder="***" />
+            <div className={formGroup}>
+              <label htmlFor="card-cvv" className={formLabel}>CVV</label>
+              <input type="password" id="card-cvv" className={formInput} placeholder="***" />
             </div>
           </div>
         </div>
@@ -87,12 +94,12 @@ export function PaymentSection({
       {/* Method 3: Net Banking Section */}
       {paymentMethod === "bank" && (
         <div id="method-bank-section">
-          <div className="form-group">
-            <label htmlFor="bank-select">Select Your Bank</label>
+          <div className={formGroup}>
+            <label htmlFor="bank-select" className={formLabel}>Select Your Bank</label>
             <Select defaultValue="sbi">
               <SelectTrigger
                 id="bank-select"
-                className="form-input w-full h-auto flex items-center justify-between text-left border-line focus:border-gold focus:ring-0 focus-visible:ring-0 text-[15px]"
+                className={`${formInput} w-full h-auto flex items-center justify-between text-left focus:border-gold focus:ring-0 focus-visible:ring-0 text-[15px]`}
               >
                 <SelectValue placeholder="Select Your Bank" />
               </SelectTrigger>
