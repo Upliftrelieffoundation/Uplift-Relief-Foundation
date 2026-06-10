@@ -49,10 +49,14 @@ export default function HeroSection() {
         </div>
 
         <div className="max-w-167.5">
-          <h1 className="mb-7 text-white">
-            जीवनम् उद्धर।
-            <em>भविष्यं पुनर्लिख।</em>
-          </h1>
+          <div className="mb-7">
+            <h1 className="text-white mb-4">
+              जीवनम् उद्धर। <em>भविष्यं पुनर्लिख।</em>
+            </h1>
+            <p className="text-gold-bright text-lg font-semibold">
+              Nagpur's Trusted NGO for Street Dog Rescue & Free Child Education
+            </p>
+          </div>
 
           <p className="mb-10 max-w-120 text-[clamp(0.9375rem,1.3vw,1.0625rem)] leading-[1.85] text-white/50">
             We run 24/7 emergency animal rescues and free education centres for
