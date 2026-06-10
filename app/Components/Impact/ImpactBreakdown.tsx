@@ -9,27 +9,29 @@ export default function ImpactBreakdownSection() {
               Every Rupee, <em>Accounted For</em>
             </h2>
             <p className="body-lg">
-              Radical transparency. Here&apos;s exactly how your donation is allocated.
+              Radical transparency. Here&apos;s exactly how your donation is
+              allocated.
             </p>
           </div>
           <div className="breakdown-cards">
             <div className="bd-card reveal">
               <div className="bd-pct">72%</div>
-              <h3>Direct Field Work</h3>
+              <h3 className="text-navy">Direct Field Work</h3>
               <p>
-                Rescue operations, veterinary care, educational supplies, scholarships.
+                Rescue operations, veterinary care, educational supplies,
+                scholarships.
               </p>
             </div>
             <div className="bd-card reveal reveal-d1">
               <div className="bd-pct">18%</div>
-              <h3>Programs &amp; Growth</h3>
+              <h3 className="text-navy">Programs &amp; Growth</h3>
               <p>
                 New centres, volunteer training, outreach, awareness campaigns.
               </p>
             </div>
             <div className="bd-card reveal reveal-d2">
               <div className="bd-pct">10%</div>
-              <h3>Operations</h3>
+              <h3 className="text-navy">Operations</h3>
               <p>Admin, legal compliance, auditing, technology.</p>
             </div>
           </div>
