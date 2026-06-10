@@ -140,34 +140,34 @@ export default function DonateFormSection() {
   };
 
   return (
-    <section className="bg-bg max-lg:px-5 max-lg:py-10 lg:px-10 lg:py-20">
-      <div className="wrap">
+    <section className="bg-bg px-3 py-10 md:px-5 lg:px-10 lg:py-20">
+      <div className="w-full max-w-[1260px] mx-auto">
         <div className="grid items-start mt-12 gap-3 max-lg:grid-cols-1 lg:grid-cols-[2.4fr_1fr] max-lg:gap-8">
           {/* Left Column: Interactive Form Panel */}
-          <div className="bg-bg-card border border-line rounded-3xl p-[clamp(1.5rem,4vw,3rem)] shadow-[0_12px_48px_rgba(0,0,0,0.15)] reveal">
+          <div className="bg-bg-card border border-line rounded-3xl px-4 py-8 md:p-[clamp(1.5rem,4vw,3rem)] shadow-[0_12px_48px_rgba(0,0,0,0.15)] reveal">
             {!showSuccess ? (
               <>
                 {/* Tab Switchers */}
                 <div className="flex gap-2 bg-bg p-1.5 rounded-full mb-10 border border-white/10">
                   <button
                     type="button"
-                    className={`flex-1 rounded-full p-3.5 text-center font-semibold text-[0.9375rem] transition-all duration-300 ${donationMode === "monthly"
+                    className={`flex-1 rounded-full p-2.5 sm:p-3.5 text-center font-semibold text-[0.875rem] sm:text-[0.9375rem] transition-all duration-300 ${donationMode === "monthly"
                         ? "bg-gold text-bg shadow-[0_4px_12px_rgba(200,162,78,0.25)]"
                         : "bg-transparent text-white/60 hover:text-white"
                       }`}
                     onClick={() => handleTabSwitch("monthly")}
                   >
-                    Monthly Member
+                    Monthly<span className="hidden sm:inline"> Member</span>
                   </button>
                   <button
                     type="button"
-                    className={`flex-1 rounded-full p-3.5 text-center font-semibold text-[0.9375rem] transition-all duration-300 ${donationMode === "onetime"
+                    className={`flex-1 rounded-full p-2.5 sm:p-3.5 text-center font-semibold text-[0.875rem] sm:text-[0.9375rem] transition-all duration-300 ${donationMode === "onetime"
                         ? "bg-gold text-bg shadow-[0_4px_12px_rgba(200,162,78,0.25)]"
                         : "bg-transparent text-white/60 hover:text-white"
                       }`}
                     onClick={() => handleTabSwitch("onetime")}
                   >
-                    One-Time Donation
+                    One-Time<span className="hidden sm:inline"> Donation</span>
                   </button>{" "}
                 </div>
 

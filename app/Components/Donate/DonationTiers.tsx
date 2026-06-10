@@ -13,7 +13,7 @@ const tierTitle =
   "text-[0.9375rem] font-bold text-white uppercase tracking-[0.05em]";
 const tierPrice =
   "text-gold-bright font-bold leading-none font-heading text-[2.25rem] my-4 flex items-end justify-center gap-1 whitespace-nowrap";
-const tierDesc = "text-[0.875rem] text-white/60 leading-relaxed mt-3 flex-grow";
+const tierDesc = "hidden md:block text-[0.875rem] text-white/60 leading-relaxed mt-3 flex-grow";
 
 export function DonationTiers({
   donationMode,

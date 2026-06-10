@@ -15,7 +15,7 @@ export default function CtaSection() {
         sizes="(max-width: 768px) 100vw, 50vw"
       />
       <div className="wrap">
-        <div className="relative z-2 max-w-145 reveal sm:my-10 lg:my-25 md:my-23">
+        <div className="relative z-2 max-w-145 reveal my-10 sm:my-10 md:my-23 lg:my-25">
           <span className="text-gold-bright">Make a Real Difference</span>
           <h2 className=" text-white mb-5">
             Don&apos;t Just Watch.
@@ -27,15 +27,15 @@ export default function CtaSection() {
             emergency rescue call or a child wanting to learn.
           </p>
 
-          <div className="flex flex-col items-start gap-4">
-            <Link href="/donate" className="btn btn-gold btn-lg">
+          <div className="flex flex-col md:items-start gap-4 w-full">
+            <Link href="/donate" className="btn btn-gold btn-lg w-full md:w-auto text-center justify-center">
               Become a Monthly Donor <ArrowRight />
             </Link>
-            <Link href="/donate" className="btn btn-ghost">
+            <Link href="/donate" className="btn btn-ghost w-full md:w-auto text-center justify-center">
               Save an Injured Animal Today <ArrowRight />
             </Link>
-            <div className="flex items-center justify-between gap-1.5 text-gray-400 text-[0.75rem] font-medium mt-1">
-              <Lock />
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-1.5 text-gray-400 text-[0.75rem] font-medium mt-1 w-full md:w-auto text-center">
+              <Lock className="w-3.5 h-3.5 shrink-0" />
               100% Secure · 80G Tax Exempt · Cancel Anytime
             </div>
           </div>

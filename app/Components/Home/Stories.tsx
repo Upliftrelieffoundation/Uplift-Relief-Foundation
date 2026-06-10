@@ -95,7 +95,7 @@ export default function StoriesSection() {
         <div className="text-center mt-16">
           <Link
             href="/stories"
-            className="btn btn-outline border-2 border-[rgba(11,20,37,0.15)] text-navy mt-auto self-start hover:border-navy hover:bg-[rgba(11,20,37,0.04)]"
+            className="btn btn-outline border-2 border-[rgba(11,20,37,0.15)] text-navy md:mt-10 sm:mt-5 self-start hover:border-navy hover:bg-[rgba(11,20,37,0.04)]"
           >
             Read All Stories{" "}
             <ArrowRight />

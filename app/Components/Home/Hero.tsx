@@ -24,7 +24,7 @@ const data = [
 
 export default function HeroSection() {
   return (
-    <header className="relative flex min-h-screen items-end overflow-hidden bg-bg pt-19 before:absolute before:inset-0 before:z-1 before:content-[''] before:[background:linear-gradient(170deg,rgba(11,20,37,0.7)_0%,rgba(11,20,37,0.3)_40%,rgba(11,20,37,0.8)_100%)]">
+    <header className="relative flex min-h-screen items-end overflow-hidden bg-bg pt-32 md:pt-19 before:absolute before:inset-0 before:z-1 before:content-[''] before:[background:linear-gradient(170deg,rgba(11,20,37,0.7)_0%,rgba(11,20,37,0.3)_40%,rgba(11,20,37,0.8)_100%)]">
       <div className="pointer-events-none absolute top-1/2 left-1/2 z-1 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap font-bold leading-none tracking-tighter text-[25vw] text-white/3">
         UPLIFT
       </div>

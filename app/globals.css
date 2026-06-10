@@ -551,7 +551,7 @@
 
   /* ─── CTA ─── */
   .cta {
-    @apply relative overflow-hidden p-20;
+    @apply relative overflow-hidden lg:py-20 lg:px-10 sm:py-10 sm:px-5  md:py-10 md:px-5 ;
   }
 
   .cta-bg {

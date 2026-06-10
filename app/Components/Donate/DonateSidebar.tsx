@@ -2,7 +2,7 @@ import { Check, Shield, Users } from "lucide-react";
 
 export function DonateSidebar() {
   return (
-    <div className="flex flex-col gap-6 reveal reveal-d1">
+    <div className="hidden md:flex flex-col gap-6 reveal reveal-d1">
       <div className="bg-bg-card border border-line rounded-[20px] p-8">
         <h4 className="text-white mb-4 flex items-center gap-2 font-heading text-[1.25rem]">
           <Shield className="w-5 h-5 text-gold" />
