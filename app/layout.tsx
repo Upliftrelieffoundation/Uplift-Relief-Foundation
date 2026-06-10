@@ -11,8 +11,8 @@ const baseUrl =
 export const metadata: Metadata = {
 	metadataBase: new URL(baseUrl),
 	title: {
-		default: "Uplift Relief Foundation | Rescue. Educate. Transform.",
-		template: "%s | Uplift Relief Foundation",
+		default: "Uplift Relief Foundation | NGO in Nagpur for Street Dog Rescue & Free Education",
+		template: "%s | Uplift Relief Foundation Nagpur",
 	},
 	description:
 		"We rescue injured street dogs and provide free education for underprivileged children across Nagpur. 100% transparent, grassroots NGO.",
@@ -94,9 +94,8 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" className={'data-scroll-behavior="smooth'}>
+		<html lang="en" className="data-scroll-behavior-smooth">
 			<head>
-				<title>Uplift Relief Foundation</title>
 				<script
 					type="application/ld+json"
 					dangerouslySetInnerHTML={{
