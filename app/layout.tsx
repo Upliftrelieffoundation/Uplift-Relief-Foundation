@@ -11,7 +11,7 @@ const baseUrl =
 export const metadata: Metadata = {
 	metadataBase: new URL(baseUrl),
 	title: {
-		default: "Uplift Relief Foundation | NGO in Nagpur for Street Dog Rescue & Free Education",
+		default: "Uplift Relief Foundation | Street Dog Rescue & Child Education",
 		template: "%s | Uplift Relief Foundation Nagpur",
 	},
 	description:

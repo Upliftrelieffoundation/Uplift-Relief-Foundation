@@ -4,10 +4,10 @@ export function DonateSidebar() {
   return (
     <div className="hidden md:flex flex-col gap-6 reveal reveal-d1">
       <div className="bg-bg-card border border-line rounded-[20px] p-8">
-        <h4 className="text-white mb-4 flex items-center gap-2 font-heading text-[1.25rem]">
+        <h2 className="text-white mb-4 flex items-center gap-2 font-heading text-[1.25rem]">
           <Shield className="w-5 h-5 text-gold" />
           Why Support Us?
-        </h4>
+        </h2>
         <p className="text-[0.875rem] text-white/60 leading-[1.7] mb-4">
           Uplift Relief Foundation is a grassroots NGO built on relentless
           action and transparency.
@@ -38,10 +38,10 @@ export function DonateSidebar() {
       </div>
 
       <div className=" text-white border-0 rounded-[20px] p-8">
-        <h4 className="text-gold mb-4 flex items-center gap-2 font-heading text-[1.25rem]">
+        <h2 className="text-gold mb-4 flex items-center gap-2 font-heading text-[1.25rem]">
           <Users className="w-5 h-5 text-gold" />
           Donor Care
-        </h4>
+        </h2>
         <p className="text-type-2 text-[0.875rem] leading-[1.7] mb-4">
           Need help with your donation or certificates? Get in touch with our
           support desk.

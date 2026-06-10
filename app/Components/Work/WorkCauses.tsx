@@ -16,7 +16,7 @@ const causes = [
       "Anti-rabies vaccination drives",
       "Adoption & foster care",
     ],
-    cta: "Feed a Street Animal",
+    cta: "Support Animal Rescue",
   },
   {
     id: "education",
@@ -31,7 +31,7 @@ const causes = [
       "Books, uniforms & digital literacy",
       "Career mentorship",
     ],
-    cta: "Sponsor a Student",
+    cta: "Sponsor a Child Today",
   },
 ];
 

@@ -37,7 +37,7 @@ export default function StoriesSection() {
                 loving home — healthy, happy, and safe.
               </p>
               <Link href="#" className="inline-flex items-center gap-1.5 text-gold-bright text-[0.75rem] font-semibold mt-3 tracking-[0.03em] no-underline transition-all duration-300 hover:gap-2.5 [&_svg]:w-3 [&_svg]:h-3">
-                Read Full Story{" "}
+                Bella&apos;s Rescue Story{" "}
                 <ArrowRight />
               </Link>
             </div>
@@ -62,7 +62,7 @@ export default function StoriesSection() {
                 forever.
               </p>
               <Link href="#" className="inline-flex items-center gap-1.5 text-gold-bright text-[0.75rem] font-semibold mt-3 tracking-[0.03em] no-underline transition-all duration-300 hover:gap-2.5 [&_svg]:w-3 [&_svg]:h-3">
-                Read Full Story{" "}
+                Rohan&apos;s Success Story{" "}
                 <ArrowRight />
               </Link>
             </div>
@@ -86,7 +86,7 @@ export default function StoriesSection() {
                 safe, vaccinated, and thriving.
               </p>
               <Link href="#" className="inline-flex items-center gap-1.5 text-gold-bright text-[0.75rem] font-semibold mt-3 tracking-[0.03em] no-underline transition-all duration-300 hover:gap-2.5 [&_svg]:w-3 [&_svg]:h-3">
-                Read Full Story{" "}
+                Midnight Rescue Story{" "}
                 <ArrowRight />
               </Link>
             </div>

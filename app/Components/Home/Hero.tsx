@@ -59,9 +59,9 @@ export default function HeroSection() {
           </div>
 
           <p className="mb-10 max-w-120 text-[clamp(0.9375rem,1.3vw,1.0625rem)] leading-[1.85] text-white/50">
-            We run 24/7 emergency animal rescues and free education centres for
-            underprivileged children — because every life deserves a fighting
-            chance.
+            We are a grassroots NGO in Nagpur running 24/7 street dog rescues
+            and free education centres for underprivileged children — because
+            every life deserves a fighting chance.
           </p>
 
           <div className="mb-[clamp(3rem,6vh,5rem)] flex flex-col gap-3 sm:flex-row">

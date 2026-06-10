@@ -15,7 +15,7 @@ export default function StoriesHeroSection() {
         <h1>
           Field <em>Stories</em>
         </h1>
-        <p>From Suffering to Second Chances</p>
+        <p>Real Stories of Rescue, Education &amp; Transformation</p>
       </div>
     </header>
   );

@@ -15,7 +15,7 @@ export default function WorkHeroSection() {
         <h1>
           Our <em>Work</em>
         </h1>
-        <p>Two Urgent Causes. One Heart.</p>
+        <p>24/7 Street Dog Rescue &amp; Free Education for Children in Nagpur</p>
       </div>
     </header>
   );

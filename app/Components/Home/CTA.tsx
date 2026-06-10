@@ -29,7 +29,7 @@ export default function CtaSection() {
 
           <div className="flex flex-col md:items-start gap-4 w-full">
             <Link href="/donate" className="btn btn-gold btn-lg w-full md:w-auto text-center justify-center">
-              Become a Monthly Donor <ArrowRight />
+              Start Monthly Giving <ArrowRight />
             </Link>
             <Link href="/donate" className="btn btn-ghost w-full md:w-auto text-center justify-center">
               Save an Injured Animal Today <ArrowRight />

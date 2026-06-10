@@ -28,7 +28,7 @@ export function DonationTiers({
             className={`${tierCardBase} ${activeTierId === "tier-500" ? tierCardActive : ""}`}
             onClick={() => onSelectTier(500, "tier-500")}
           >
-            <span className={tierTitle}>Animal Friend</span>
+            <h3 className={tierTitle}>Animal Friend</h3>
             <span className={tierPrice}>
               <span>₹500</span>
               <span className="text-sm font-normal text-type-3 mb-1">/mo</span>
@@ -43,7 +43,7 @@ export function DonationTiers({
             className={`${tierCardBase} ${tierCardPopular} ${activeTierId === "tier-1200" ? tierCardActive : ""}`}
             onClick={() => onSelectTier(1200, "tier-1200")}
           >
-            <span className={tierTitle}>Child Sponsor</span>
+            <h3 className={tierTitle}>Child Sponsor</h3>
             <span className={tierPrice}>
               ₹1,200
               <span className="text-sm font-normal text-type-3">/mo</span>
@@ -58,7 +58,7 @@ export function DonationTiers({
             className={`${tierCardBase} ${activeTierId === "tier-3000" ? tierCardActive : ""}`}
             onClick={() => onSelectTier(3000, "tier-3000")}
           >
-            <span className={tierTitle}>Rescue Hero</span>
+            <h3 className={tierTitle}>Rescue Hero</h3>
             <span className={tierPrice}>
               ₹3,000
               <span className="text-sm font-normal text-type-3">/mo</span>
@@ -80,7 +80,7 @@ export function DonationTiers({
           className={`${tierCardBase} ${activeTierId === "one-1000" ? tierCardActive : ""}`}
           onClick={() => onSelectTier(1000, "one-1000")}
         >
-          <span className={tierTitle}>Sponsor Meal</span>
+            <h3 className={tierTitle}>Sponsor Meal</h3>
           <span className={tierPrice}>₹1,000</span>
           <p className={tierDesc}>Feeds a street pack during night drives.</p>
         </div>
@@ -88,7 +88,7 @@ export function DonationTiers({
           className={`${tierCardBase} ${tierCardPopular} ${activeTierId === "one-2500" ? tierCardActive : ""}`}
           onClick={() => onSelectTier(2500, "one-2500")}
         >
-          <span className={tierTitle}>Rescue Mission</span>
+            <h3 className={tierTitle}>Rescue Mission</h3>
           <span className={tierPrice}>₹2,500</span>
           <p className={tierDesc}>
             Covers vehicle dispatch &amp; emergency care.
@@ -98,7 +98,7 @@ export function DonationTiers({
           className={`${tierCardBase} ${activeTierId === "one-5000" ? tierCardActive : ""}`}
           onClick={() => onSelectTier(5000, "one-5000")}
         >
-          <span className={tierTitle}>Sponsor Center</span>
+            <h3 className={tierTitle}>Sponsor Center</h3>
           <span className={tierPrice}>₹5,000</span>
           <p className={tierDesc}>
             Supplies books &amp; study materials for center.
