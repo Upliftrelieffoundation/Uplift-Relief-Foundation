@@ -11,22 +11,22 @@ export function Footer() {
         <div className="footer-main">
           <div className="footer-brand">
             <Image
-              src="/images/logo_stacked.png"
+              src="/images/Uplift-Logo.png"
               alt="Uplift Relief Foundation"
               width={160}
               height={44}
-              className="w-auto h-22"
+              className="w-auto h-32"
             />
-            <p>
-              A grassroots NGO rescuing street animals and educating
-              underprivileged children across India. Nagpur since 2026.
-            </p>
-            <div className=" mt-5 p-4 bg-[rgba(255,255,255,0.03)] border border-line rounded-xl text-sm">
-              <p>
-                Registered under the Societies Registration Act. Reg No:
-                MAH/564/2026/NAGPUR. Donations eligible for 80G tax exemption.
-              </p>
-            </div>
+            {/* <p> */}
+            {/*   A grassroots NGO rescuing street animals and educating */}
+            {/*   underprivileged children across India. Nagpur since 2026. */}
+            {/* </p> */}
+            {/* <div className=" mt-5 p-4 bg-[rgba(255,255,255,0.03)] border border-line rounded-xl text-sm"> */}
+            {/*   <p> */}
+            {/*     Registered under the Societies Registration Act. Reg No: */}
+            {/*     MAH/564/2026/NAGPUR. Donations eligible for 80G tax exemption. */}
+            {/*   </p> */}
+            {/* </div> */}
           </div>
           <div className="footer-col">
             <h5>Our Work</h5>
@@ -39,12 +39,6 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/stories">Field Stories</Link>
-              </li>
-              <li>
-                <Link href="/impact">Impact Reports</Link>
-              </li>
-              <li>
-                <Link href="#">Annual Report 2026</Link>
               </li>
             </ul>
           </div>
@@ -59,9 +53,6 @@ export function Footer() {
               </li>
               <li>
                 <Link href="#">Partner With Us</Link>
-              </li>
-              <li>
-                <Link href="#">Corporate CSR</Link>
               </li>
             </ul>
           </div>
