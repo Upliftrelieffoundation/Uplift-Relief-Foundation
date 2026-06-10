@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 export default function StoriesSection() {
   return (
     <section className="bg-white relative overflow-hidden max-lg:px-5 max-lg:py-10 lg:px-10 lg:py-20" id="stories">
-      <div className="wrap">
+      <div className="md:mx-20 lg:mx-20">
         <div className="mb-[clamp(3rem,5vw,4rem)] reveal">
           <span className="eyebrow !text-gold-bright">Stories from the Field</span>
           <h2 className="text-navy ">
@@ -95,7 +95,7 @@ export default function StoriesSection() {
         <div className="text-center mt-16">
           <Link
             href="/stories"
-            className="btn btn-outline border-2 border-[rgba(11,20,37,0.15)] text-navy md:mt-10 sm:mt-5 self-start hover:border-navy hover:bg-[rgba(11,20,37,0.04)]"
+            className="btn btn-outline border-2 border-[rgba(11,20,37,0.15)] text-navy md:mt-1 sm:mt-5 self-start hover:border-navy hover:bg-[rgba(11,20,37,0.04)]"
           >
             Read All Stories{" "}
             <ArrowRight />

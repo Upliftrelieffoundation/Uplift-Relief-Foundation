@@ -140,8 +140,8 @@ export default function DonateFormSection() {
   };
 
   return (
-    <section className="bg-bg px-3 py-10 md:px-5 lg:px-10 lg:py-20">
-      <div className="w-full max-w-[1260px] mx-auto">
+    <section className="bg-bg px-3 pb-10 md:px-5 lg:px-10 lg:py-20">
+      <div className="w-full max-w-315 mx-auto">
         <div className="grid items-start mt-12 gap-3 max-lg:grid-cols-1 lg:grid-cols-[2.4fr_1fr] max-lg:gap-8">
           {/* Left Column: Interactive Form Panel */}
           <div className="bg-bg-card border border-line rounded-3xl px-4 py-8 md:p-[clamp(1.5rem,4vw,3rem)] shadow-[0_12px_48px_rgba(0,0,0,0.15)] reveal">

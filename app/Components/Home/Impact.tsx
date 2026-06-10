@@ -9,7 +9,7 @@ export default function ImpactSection() {
       className="bg-white max-lg:px-5 max-lg:py-10 lg:px-10 lg:py-20"
       id="impact"
     >
-      <div className="wrap">
+      <div className="md:mx-20 lg:mx-20">
         <div className="grid items-center gap-10 max-lg:grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] lg:gap-[clamp(3rem,6vw,5rem)]">
           <div className="reveal">
             <span className="eyebrow !text-gold-deep">

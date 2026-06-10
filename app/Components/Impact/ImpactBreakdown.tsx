@@ -1,7 +1,7 @@
 export default function ImpactBreakdownSection() {
   return (
     <section className="breakdown">
-      <div className="wrap">
+      <div className="md:mx-20 lg:mx-20">
         <div className="breakdown-inner">
           <div className="breakdown-head reveal">
             <span className="eyebrow">Where Your Money Goes</span>

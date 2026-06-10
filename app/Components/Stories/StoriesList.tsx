@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 export default function StoriesList() {
   return (
     <section className="stories" id="stories">
-      <div className="wrap">
+      <div className="md:mx-20 lg:mx-20">
         <div className="stories-header reveal">
           <span className="eyebrow">Stories from the Field</span>
           <h2>

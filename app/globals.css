@@ -241,8 +241,12 @@
 
   /* ─── Layout ─── */
   .wrap {
-    @apply max-w-[1260px] mx-auto;
-    padding: 0 clamp(1.5rem, 5%, 3.5rem);
+    @apply max-w-315 mx-auto px-0;
+  }
+  @media (min-width: 768px) {
+    .wrap {
+      padding: 0 clamp(1.5rem, 5%, 3.5rem);
+    }
   }
 
   /* ─── Buttons ─── */

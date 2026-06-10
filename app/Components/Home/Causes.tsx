@@ -56,7 +56,7 @@ export default function CausesSection() {
                 <h3 className="mb-3 text-navy">{cause.title}</h3>
                 <p className="text-[rgba(11,20,37,0.7)] text-[0.9375rem] leading-[1.75] mb-5">{cause.description}</p>
 
-                <Link href="/donate" className="btn btn-outline border-[rgba(11,20,37,0.15)] text-navy mt-auto w-full md:w-auto md:self-start hover:border-navy hover:bg-[rgba(11,20,37,0.04)]">
+                <Link href="/donate" className="btn btn-outline border-2 border-[rgba(11,20,37,0.15)] text-navy mt-auto w-full md:w-auto md:self-start hover:border-navy hover:bg-[rgba(11,20,37,0.04)]">
                   {cause.btnLabel} <ArrowRight />
                 </Link>
               </div>
