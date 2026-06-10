@@ -241,7 +241,7 @@
 
   /* ─── Layout ─── */
   .wrap {
-    @apply max-w-315 mx-auto px-0;
+    @apply max-w-315 mx-auto px-5;
   }
   @media (min-width: 768px) {
     .wrap {
@@ -321,8 +321,12 @@
   }
 
   .nav-inner {
-    @apply flex items-center justify-between h-full max-w-[1400px] mx-auto;
-    padding: 0 clamp(1.25rem, 4%, 2.5rem);
+    @apply flex items-center justify-between h-full max-w-[1400px] mx-auto px-5;
+  }
+  @media (min-width: 768px) {
+    .nav-inner {
+      padding: 0 clamp(1.25rem, 4%, 2.5rem);
+    }
   }
 
   .nav-logo img {

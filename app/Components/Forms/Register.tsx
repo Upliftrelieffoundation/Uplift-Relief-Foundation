@@ -91,7 +91,7 @@ const Register = () => {
   };
 
   return (
-    <div className="w-full max-w-md mx-auto bg-bg-card border border-line p-8 rounded-2xl shadow-2xl flex flex-col gap-6 pt-10">
+    <div className="w-full max-w-md mx-auto bg-bg-card border border-line p-6 rounded-2xl shadow-2xl flex flex-col gap-4 pt-6">
       <div className="text-center flex flex-col gap-2">
         <div className="text-[1.875rem] font-bold text-chalk font-['Play'] tracking-tight leading-none m-0">
           Create Account
@@ -104,20 +104,20 @@ const Register = () => {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="flex flex-col gap-5"
+          className="flex flex-col gap-4"
         >
           <Button
             type="button"
             variant="outline"
             onClick={handleGoogleLogin}
             disabled={isLoading}
-            className="w-full min-h-12 bg-transparent border border-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.05)] text-chalk font-medium rounded-full transition-all duration-300"
+            className="w-full min-h-10 bg-transparent border border-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.05)] text-chalk font-medium rounded-full transition-all duration-300"
           >
             <FcGoogle />
             Google
           </Button>
 
-          <div className="relative my-2">
+          <div className="relative my-1">
             <div className="absolute inset-0 flex items-center">
               <span className="w-full border-t border-[rgba(255,255,255,0.1)]" />
             </div>
@@ -139,7 +139,7 @@ const Register = () => {
                 <FormControl>
                   <Input
                     placeholder="John Doe"
-                    className="bg-bg border-[rgba(255,255,255,0.1)] text-chalk placeholder:text-white/50 focus-visible:ring-gold focus-visible:border-gold min-h-12 px-4 py-3 [&:-webkit-autofill]:bg-bg [&:-webkit-autofill]:text-chalk [&:-webkit-autofill]:shadow-[0_0_0_30px_#0b1425_inset] [&:-webkit-autofill]:-webkit-text-fill-color-white"
+                    className="bg-bg border-[rgba(255,255,255,0.1)] text-chalk placeholder:text-white/50 focus-visible:ring-gold focus-visible:border-gold min-h-10 px-3 py-2 [&:-webkit-autofill]:bg-bg [&:-webkit-autofill]:text-chalk [&:-webkit-autofill]:shadow-[0_0_0_30px_#0b1425_inset] [&:-webkit-autofill]:-webkit-text-fill-color-white"
                     {...field}
                   />
                 </FormControl>
@@ -159,7 +159,7 @@ const Register = () => {
                 <FormControl>
                   <Input
                     placeholder="you@example.com"
-                    className="bg-bg border-[rgba(255,255,255,0.1)] text-chalk placeholder:text-white/50 focus-visible:ring-gold focus-visible:border-gold min-h-12 px-4 py-3 [&:-webkit-autofill]:bg-bg [&:-webkit-autofill]:text-chalk [&:-webkit-autofill]:shadow-[0_0_0_30px_#0b1425_inset] [&:-webkit-autofill]:-webkit-text-fill-color-white"
+                    className="bg-bg border-[rgba(255,255,255,0.1)] text-chalk placeholder:text-white/50 focus-visible:ring-gold focus-visible:border-gold min-h-10 px-3 py-2 [&:-webkit-autofill]:bg-bg [&:-webkit-autofill]:text-chalk [&:-webkit-autofill]:shadow-[0_0_0_30px_#0b1425_inset] [&:-webkit-autofill]:-webkit-text-fill-color-white"
                     {...field}
                   />
                 </FormControl>
@@ -180,7 +180,7 @@ const Register = () => {
                   <Input
                     type="password"
                     placeholder="••••••••"
-                    className="bg-bg border-[rgba(255,255,255,0.1)] text-chalk placeholder:text-white/50 focus-visible:ring-gold focus-visible:border-gold min-h-12 px-4 py-3 [&:-webkit-autofill]:bg-bg [&:-webkit-autofill]:text-chalk [&:-webkit-autofill]:shadow-[0_0_0_30px_#0b1425_inset] [&:-webkit-autofill]:-webkit-text-fill-color-white"
+                    className="bg-bg border-[rgba(255,255,255,0.1)] text-chalk placeholder:text-white/50 focus-visible:ring-gold focus-visible:border-gold min-h-10 px-3 py-2 [&:-webkit-autofill]:bg-bg [&:-webkit-autofill]:text-chalk [&:-webkit-autofill]:shadow-[0_0_0_30px_#0b1425_inset] [&:-webkit-autofill]:-webkit-text-fill-color-white"
                     {...field}
                   />
                 </FormControl>
@@ -201,7 +201,7 @@ const Register = () => {
                   <Input
                     type="password"
                     placeholder="••••••••"
-                    className="bg-bg border-[rgba(255,255,255,0.1)] text-chalk placeholder:text-white/50 focus-visible:ring-gold focus-visible:border-transparent min-h-12 px-4 py-3 [&:-webkit-autofill]:bg-bg [&:-webkit-autofill]:text-chalk [&:-webkit-autofill]:shadow-[0_0_0_30px_#0b1425_inset] [&:-webkit-autofill]:-webkit-text-fill-color-white"
+                    className="bg-bg border-[rgba(255,255,255,0.1)] text-chalk placeholder:text-white/50 focus-visible:ring-gold focus-visible:border-transparent min-h-10 px-3 py-2 [&:-webkit-autofill]:bg-bg [&:-webkit-autofill]:text-chalk [&:-webkit-autofill]:shadow-[0_0_0_30px_#0b1425_inset] [&:-webkit-autofill]:-webkit-text-fill-color-white"
                     {...field}
                   />
                 </FormControl>
@@ -213,7 +213,7 @@ const Register = () => {
           <Button
             type="submit"
             disabled={isLoading}
-            className="w-full min-h-12 mt-2 bg-gold hover:bg-gold-bright text-bg font-bold rounded-full transition-all duration-300 shadow-[0_6px_24px_rgba(200,162,78,0.25)] hover:shadow-[0_12px_32px_rgba(200,162,78,0.4)] hover:-translate-y-0.5 border-0"
+            className="w-full min-h-10 mt-1 bg-gold hover:bg-gold-bright text-bg font-bold rounded-full transition-all duration-300 shadow-[0_6px_24px_rgba(200,162,78,0.25)] hover:shadow-[0_12px_32px_rgba(200,162,78,0.4)] hover:-translate-y-0.5 border-0"
           >
             {isLoading ? (
               <Loader2 className="w-5 h-5 animate-spin" />
