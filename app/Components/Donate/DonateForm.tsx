@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
+import { z } from "zod";
+import { paymentSchema, contactSchema } from "@/app/lib/validations";
 import { DonateSidebar } from "./DonateSidebar";
 import { SuccessScreen } from "./SuccessScreen";
 import { DonationTiers } from "./DonationTiers";
@@ -37,6 +39,21 @@ export default function DonateFormSection() {
   const [donorName, setDonorName] = useState("");
   const [donorEmail, setDonorEmail] = useState("");
 
+  const [cardNumber, setCardNumber] = useState("");
+  const [cardExpiry, setCardExpiry] = useState("");
+  const [cardCvv, setCardCvv] = useState("");
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
+
+  const clearError = (field: string) => {
+    if (fieldErrors[field]) {
+      setFieldErrors((prev) => {
+        const next = { ...prev };
+        delete next[field];
+        return next;
+      });
+    }
+  };
+
   const [showSuccess, setShowSuccess] = useState(false);
   const [successMessage, setSuccessMessage] = useState({
     title: "",
@@ -66,6 +83,44 @@ export default function DonateFormSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    const errors: Record<string, string> = {};
+
+    const contactResult = contactSchema.safeParse({
+      name: donorName,
+      email: donorEmail,
+      phone: (document.getElementById("donor-phone") as HTMLInputElement)
+        ?.value,
+      pan: (document.getElementById("donor-pan") as HTMLInputElement)?.value,
+    });
+    if (!contactResult.success) {
+      const flat = z.flattenError(contactResult.error);
+      for (const [key, msgs] of Object.entries(flat.fieldErrors)) {
+        if (msgs && msgs.length) errors[key] = msgs[0];
+      }
+    }
+
+    if (paymentMethod === "card") {
+      const paymentResult = paymentSchema.safeParse({
+        cardNumber,
+        expiry: cardExpiry,
+        cvv: cardCvv,
+      });
+      if (!paymentResult.success) {
+        const flat = z.flattenError(paymentResult.error);
+        for (const [key, msgs] of Object.entries(flat.fieldErrors)) {
+          if (msgs && msgs.length) errors[key] = msgs[0];
+        }
+      }
+    }
+
+    if (Object.keys(errors).length > 0) {
+      setFieldErrors(errors);
+      return;
+    }
+
+    setFieldErrors({});
+
     const formattedAmt = Number(amount).toLocaleString("en-IN");
     const typeText = donationMode === "monthly" ? "/month" : " (one-time)";
 
@@ -85,9 +140,9 @@ export default function DonateFormSection() {
   };
 
   return (
-    <section className="bg-ivory max-lg:px-5 max-lg:py-10 lg:px-10 lg:py-20">
+    <section className="bg-bg max-lg:px-5 max-lg:py-10 lg:px-10 lg:py-20">
       <div className="wrap">
-        <div className="grid items-start mt-12 gap-3 max-lg:grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] max-lg:gap-8">
+        <div className="grid items-start mt-12 gap-3 max-lg:grid-cols-1 lg:grid-cols-[2.4fr_1fr] max-lg:gap-8">
           {/* Left Column: Interactive Form Panel */}
           <div className="bg-bg-card border border-line rounded-3xl p-[clamp(1.5rem,4vw,3rem)] shadow-[0_12px_48px_rgba(0,0,0,0.15)] reveal">
             {!showSuccess ? (
@@ -95,17 +150,25 @@ export default function DonateFormSection() {
                 {/* Tab Switchers */}
                 <div className="flex gap-2 bg-bg p-1.5 rounded-full mb-10 border border-white/10">
                   <button
-                    className={`flex-1 border-none bg-transparent text-white/60 font-semibold text-[0.9375rem] rounded-full cursor-pointer text-center font-sans p-3.5 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${donationMode === "monthly" ? "bg-gold text-bg shadow-[0_4px_12px_rgba(200,162,78,0.25)]" : ""}`}
+                    type="button"
+                    className={`flex-1 rounded-full p-3.5 text-center font-semibold text-[0.9375rem] transition-all duration-300 ${donationMode === "monthly"
+                        ? "bg-gold text-bg shadow-[0_4px_12px_rgba(200,162,78,0.25)]"
+                        : "bg-transparent text-white/60 hover:text-white"
+                      }`}
                     onClick={() => handleTabSwitch("monthly")}
                   >
                     Monthly Member
                   </button>
                   <button
-                    className={`flex-1 border-none bg-transparent text-white/60 font-semibold text-[0.9375rem] rounded-full cursor-pointer text-center font-sans p-3.5 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${donationMode === "onetime" ? "bg-gold text-bg shadow-[0_4px_12px_rgba(200,162,78,0.25)]" : ""}`}
+                    type="button"
+                    className={`flex-1 rounded-full p-3.5 text-center font-semibold text-[0.9375rem] transition-all duration-300 ${donationMode === "onetime"
+                        ? "bg-gold text-bg shadow-[0_4px_12px_rgba(200,162,78,0.25)]"
+                        : "bg-transparent text-white/60 hover:text-white"
+                      }`}
                     onClick={() => handleTabSwitch("onetime")}
                   >
                     One-Time Donation
-                  </button>
+                  </button>{" "}
                 </div>
 
                 {/* Donation Form Container */}
@@ -185,7 +248,7 @@ export default function DonateFormSection() {
                         <input
                           type="tel"
                           id="donor-phone"
-                          className="bg-[#152640] border border-white/10 rounded-xl text-white outline-none font-sans text-[0.9375rem] p-3.5 px-5 transition-colors duration-300 focus:border-gold"
+                          className="bg-bg-elevated border border-white/10 rounded-xl text-white outline-none font-sans text-[0.9375rem] p-3.5 px-5 transition-colors duration-300 focus:border-gold"
                           placeholder="+91 98765 43210"
                           required
                         />
@@ -200,7 +263,7 @@ export default function DonateFormSection() {
                         <input
                           type="text"
                           id="donor-pan"
-                          className="bg-[#152640] border border-white/10 rounded-xl text-white outline-none font-sans text-[0.9375rem] p-3.5 px-5 transition-colors duration-300 focus:border-gold"
+                          className="bg-bg-elevated border border-white/10 rounded-xl text-white outline-none font-sans text-[0.9375rem] p-3.5 px-5 transition-colors duration-300 focus:border-gold"
                           placeholder="ABCDE1234F"
                         />
                       </div>
@@ -209,6 +272,22 @@ export default function DonateFormSection() {
                     <PaymentSection
                       paymentMethod={paymentMethod}
                       onMethodChange={setPaymentMethod}
+                      cardNumber={cardNumber}
+                      cardExpiry={cardExpiry}
+                      cardCvv={cardCvv}
+                      onCardNumberChange={(v) => {
+                        setCardNumber(v);
+                        clearError("cardNumber");
+                      }}
+                      onCardExpiryChange={(v) => {
+                        setCardExpiry(v);
+                        clearError("expiry");
+                      }}
+                      onCardCvvChange={(v) => {
+                        setCardCvv(v);
+                        clearError("cvv");
+                      }}
+                      fieldErrors={fieldErrors}
                     />
 
                     <button

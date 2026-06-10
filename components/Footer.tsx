@@ -86,19 +86,22 @@ export function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <p className="flex items-center gap-2 text-gray-500"><Copyright size={18} /> 2026 Uplift Relief Foundation. All rights reserved.</p>
+          <p className="flex items-center gap-2 text-gray-500">
+            <Copyright size={18} /> 2026 Uplift Relief Foundation. All rights
+            reserved.
+          </p>
           <div className="flex gap-5 justify-between items-center ">
             <a href="#" aria-label="Instagram">
-              <BsInstagram />
+              <BsInstagram size={20} />
             </a>
             <a href="#" aria-label="Twitter">
-              <BsTwitterX />
+              <BsTwitterX size={20} />
             </a>
             <a href="#" aria-label="LinkedIn">
-              <BsLinkedin />
+              <BsLinkedin size={20} />
             </a>
             <a href="#" aria-label="YouTube">
-              <GrYoutube size={30} />
+              <GrYoutube size={25} />
             </a>
           </div>
         </div>

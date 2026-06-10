@@ -96,7 +96,7 @@ const Login = () => {
             variant="outline"
             onClick={handleGoogleLogin}
             disabled={isLoading}
-            className="w-full min-h-12 bg-transparent border border-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.05)] text-chalk font-medium rounded-full transition-all duration-300"
+            className="w-full min-h-12 bg-transparent border hover:text-white border-[rgba(255,255,255,0.1)] hover:border-gold/50 hover:bg-[rgba(255,255,255,0.05)] text-chalk font-medium rounded-full transition-all duration-300"
           >
             <FcGoogle />
             Google

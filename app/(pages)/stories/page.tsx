@@ -1,7 +1,5 @@
 import { Metadata } from "next";
-import StoriesHeroSection from "@/app/Components/Stories/StoriesHero";
-import StoriesListSection from "@/app/Components/Stories/StoriesList";
-import CtaSection from "@/app/Components/Home/CTA";
+import StoriesSection from '@/app/Components/Home/Stories';
 
 export const metadata: Metadata = {
   title: "Field Stories | Uplift Relief Foundation",
@@ -10,10 +8,8 @@ export const metadata: Metadata = {
 
 export default function Stories() {
   return (
-    <>
-      <StoriesHeroSection />
-      <StoriesListSection />
-      <CtaSection />
-    </>
+    <div className="mt-13">
+      <StoriesSection />
+    </div>
   );
 }

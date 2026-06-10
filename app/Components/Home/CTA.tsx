@@ -24,13 +24,13 @@ export default function CtaSection() {
             Your monthly contribution ensures we never say &quot;no&quot; to an
             emergency rescue call or a child wanting to learn.
           </p>
-          
+
           <div className="flex flex-col items-start gap-4">
             <Link href="/donate" className="btn btn-gold btn-lg">
               Become a Monthly Donor <ArrowRight />
             </Link>
             <Link href="/donate" className="btn btn-ghost">
-              Save an Injured Animal Today <ArrowRight/>
+              Save an Injured Animal Today <ArrowRight />
             </Link>
             <div className="flex items-center justify-between gap-1.5 text-gray-500 text-[0.75rem] font-medium mt-1">
               <Lock />

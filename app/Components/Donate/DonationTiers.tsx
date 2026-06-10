@@ -1,18 +1,19 @@
-import React from "react";
-
 interface DonationTiersProps {
   donationMode: "monthly" | "onetime";
   activeTierId: string;
   onSelectTier: (amount: number, tierId: string) => void;
 }
-
-const tierCardBase = "bg-[#152640] border-2 border-transparent rounded-[20px] text-center cursor-pointer flex flex-col relative p-8 px-6 transition-all duration-[0.35s] ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:border-navy-light";
+const tierCardBase =
+  "bg-[#152640] border-2 border-transparent rounded-[20px] text-center cursor-pointer flex flex-col justify-start relative p-5 lg:min-h-[260px] transition-all duration-[0.35s] ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:border-gold/60";
 const tierCardActive = "border-gold bg-[rgba(200,162,78,0.03)]";
-const tierCardPopular = "border-gold-deep before:content-['Most_Popular'] before:absolute before:-top-3 before:left-1/2 before:-translate-x-1/2 before:bg-gold-deep before:text-white before:rounded-full before:font-bold before:uppercase before:text-[0.625rem] before:tracking-[0.08em] before:px-3 before:py-1 before:z-10";
+const tierCardPopular =
+  "border-gold-deep before:content-['Most_Popular'] before:absolute before:-top-3 before:left-1/2 before:-translate-x-1/2 before:bg-gold-deep before:text-white before:rounded-full before:font-bold before:uppercase before:text-[0.625rem] before:tracking-[0.1em] before:px-4 before:py-1 before:whitespace-nowrap before:shadow-[0_4px_12px_rgba(166,132,46,0.4)] before:z-10";
 
-const tierTitle = "text-[0.9375rem] font-bold text-white uppercase tracking-[0.05em]";
-const tierPrice = "text-gold-bright font-bold leading-none font-heading text-[2.25rem] my-4";
-const tierDesc = "text-[0.8125rem] text-white/60 leading-[1.6] mt-2 flex-grow";
+const tierTitle =
+  "text-[0.9375rem] font-bold text-white uppercase tracking-[0.05em]";
+const tierPrice =
+  "text-gold-bright font-bold leading-none font-heading text-[2.25rem] my-4 flex items-end justify-center gap-1 whitespace-nowrap";
+const tierDesc = "text-[0.875rem] text-white/60 leading-relaxed mt-3 flex-grow";
 
 export function DonationTiers({
   donationMode,
@@ -22,20 +23,19 @@ export function DonationTiers({
   if (donationMode === "monthly") {
     return (
       <div id="content-monthly">
-        <div className="grid gap-5 mb-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-5 mb-8 grid-cols-1 md:grid-cols-3">
           <div
             className={`${tierCardBase} ${activeTierId === "tier-500" ? tierCardActive : ""}`}
             onClick={() => onSelectTier(500, "tier-500")}
           >
             <span className={tierTitle}>Animal Friend</span>
             <span className={tierPrice}>
-              ₹500
-              <span className="text-sm font-normal text-type-3">
-                /mo
-              </span>
+              <span>₹500</span>
+              <span className="text-sm font-normal text-type-3 mb-1">/mo</span>
             </span>
             <p className={tierDesc}>
-              Feeds a street dog with healthy meals and clean water for an entire month.
+              Feeds a street dog with healthy meals and clean water for an
+              entire month.
             </p>
           </div>
 
@@ -46,12 +46,11 @@ export function DonationTiers({
             <span className={tierTitle}>Child Sponsor</span>
             <span className={tierPrice}>
               ₹1,200
-              <span className="text-sm font-normal text-type-3">
-                /mo
-              </span>
+              <span className="text-sm font-normal text-type-3">/mo</span>
             </span>
             <p className={tierDesc}>
-              Sponsors full school supplies, tuition, and basic nutrition for one child.
+              Sponsors full school supplies, tuition, and basic nutrition for
+              one child.
             </p>
           </div>
 
@@ -62,12 +61,11 @@ export function DonationTiers({
             <span className={tierTitle}>Rescue Hero</span>
             <span className={tierPrice}>
               ₹3,000
-              <span className="text-sm font-normal text-type-3">
-                /mo
-              </span>
+              <span className="text-sm font-normal text-type-3">/mo</span>
             </span>
             <p className={tierDesc}>
-              Sponsors life-saving surgeries for injured dogs and digital tutoring for kids.
+              Sponsors life-saving surgeries for injured dogs and digital
+              tutoring for kids.
             </p>
           </div>
         </div>
@@ -77,7 +75,7 @@ export function DonationTiers({
 
   return (
     <div id="content-onetime">
-      <div className="grid gap-5 mb-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-5 mb-8 grid-cols-1 md:grid-cols-3">
         <div
           className={`${tierCardBase} ${activeTierId === "one-1000" ? tierCardActive : ""}`}
           onClick={() => onSelectTier(1000, "one-1000")}
@@ -92,7 +90,9 @@ export function DonationTiers({
         >
           <span className={tierTitle}>Rescue Mission</span>
           <span className={tierPrice}>₹2,500</span>
-          <p className={tierDesc}>Covers vehicle dispatch &amp; emergency care.</p>
+          <p className={tierDesc}>
+            Covers vehicle dispatch &amp; emergency care.
+          </p>
         </div>
         <div
           className={`${tierCardBase} ${activeTierId === "one-5000" ? tierCardActive : ""}`}
@@ -100,7 +100,9 @@ export function DonationTiers({
         >
           <span className={tierTitle}>Sponsor Center</span>
           <span className={tierPrice}>₹5,000</span>
-          <p className={tierDesc}>Supplies books &amp; study materials for center.</p>
+          <p className={tierDesc}>
+            Supplies books &amp; study materials for center.
+          </p>
         </div>
       </div>
     </div>
