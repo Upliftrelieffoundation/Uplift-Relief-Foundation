@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "tasks": [
+    {
+      "name": "build",
+      "cwd": "./",
+      "cmd": " npm run build",
+      "terminal": "float"
+    },
+    {
+      "name": "lint",
+      "cwd": "./",
+      "cmd": "npm run lint",
+      "terminal": "float"
+    }
+  ]
+}
+
