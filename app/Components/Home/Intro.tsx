@@ -14,6 +14,8 @@ export default function IntroSection() {
                 alt="Our volunteer team"
                 width={800}
                 height={600}
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="w-full object-cover h-[clamp(400px,50vw,580px)]"
               />
             </div>

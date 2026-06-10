@@ -71,6 +71,8 @@ export default function ImpactSection() {
                 alt="Rescued dog at shelter"
                 width={800}
                 height={800}
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="w-full object-cover h-[clamp(380px,40vw,540px)]"
               />
             </div>

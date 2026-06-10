@@ -22,6 +22,8 @@ export default function StoriesList() {
               alt="Evening feeding drive"
               width={800}
               height={800}
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
             <div className="s-body">
               <span className="s-tag">Animal Rescue · Apr 2026</span>
@@ -43,6 +45,8 @@ export default function StoriesList() {
               alt="Children at learning centre"
               width={600}
               height={400}
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
             <div className="s-body">
               <span className="s-tag">Education · Mar 2026</span>
@@ -63,6 +67,8 @@ export default function StoriesList() {
               alt="Rescued puppy"
               width={600}
               height={400}
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
             <div className="s-body">
               <span className="s-tag">Rescue · Feb 2026</span>

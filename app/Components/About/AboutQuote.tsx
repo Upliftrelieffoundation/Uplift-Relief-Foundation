@@ -9,6 +9,8 @@ export default function AboutQuoteSection() {
         className="immersive-bg"
         width={1920}
         height={1080}
+        loading="lazy"
+        sizes="(max-width: 768px) 100vw, 50vw"
       />
       <div className="immersive-inner reveal">
         <blockquote>

@@ -28,6 +28,8 @@ export default function WorkCausesSection() {
                 alt="Street dog rescue"
                 width={600}
                 height={400}
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="w-full object-cover h-[clamp(220px,22vw,320px)] transition-transform duration-[0.7s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]"
               />
               <div className="absolute top-4 left-4 bg-navy text-white rounded-full text-[0.625rem] font-bold uppercase tracking-[0.1em] px-3 py-[0.3rem]">Animal Welfare</div>
@@ -68,6 +70,8 @@ export default function WorkCausesSection() {
                 alt="Free education centre"
                 width={600}
                 height={400}
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="w-full object-cover h-[clamp(220px,22vw,320px)] transition-transform duration-[0.7s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]"
               />
               <div className="absolute top-4 left-4 bg-navy text-white rounded-full text-[0.625rem] font-bold uppercase tracking-[0.1em] px-3 py-[0.3rem]">Child Education</div>

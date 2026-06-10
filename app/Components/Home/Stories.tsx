@@ -23,6 +23,8 @@ export default function StoriesSection() {
               alt="Evening feeding drive"
               width={800}
               height={800}
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-[0.7s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04] saturate-[0.9] brightness-[0.75] group-hover:saturate-[0.95] group-hover:brightness-[0.8]"
             />
             <div className="after:content-[''] after:absolute after:inset-0 after:bg-[linear-gradient(to_top,rgba(11,20,37,0.92)_0%,rgba(11,20,37,0.2)_55%,transparent_100%)] pointer-events-none" />
@@ -46,6 +48,8 @@ export default function StoriesSection() {
               alt="Children at learning centre"
               width={600}
               height={400}
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-[0.7s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04] saturate-[0.9] brightness-[0.75] group-hover:saturate-[0.95] group-hover:brightness-[0.8]"
             />
             <div className="after:content-[''] after:absolute after:inset-0 after:bg-[linear-gradient(to_top,rgba(11,20,37,0.92)_0%,rgba(11,20,37,0.2)_55%,transparent_100%)] pointer-events-none" />
@@ -69,6 +73,8 @@ export default function StoriesSection() {
               alt="Rescued puppy"
               width={600}
               height={400}
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-[0.7s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04] saturate-[0.9] brightness-[0.75] group-hover:saturate-[0.95] group-hover:brightness-[0.8]"
             />
             <div className="after:content-[''] after:absolute after:inset-0 after:bg-[linear-gradient(to_top,rgba(11,20,37,0.92)_0%,rgba(11,20,37,0.2)_55%,transparent_100%)] pointer-events-none" />

@@ -11,6 +11,8 @@ export default function CtaSection() {
         className="cta-bg"
         width={1920}
         height={1080}
+        loading="lazy"
+        sizes="(max-width: 768px) 100vw, 50vw"
       />
       <div className="wrap">
         <div className="relative z-2 max-w-145 reveal sm:my-10 lg:my-25 md:my-23">

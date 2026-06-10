@@ -13,6 +13,8 @@ export default function AboutIntroSection() {
                 alt="Our volunteer team"
                 width={800}
                 height={600}
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
             <div className="intro-float">
