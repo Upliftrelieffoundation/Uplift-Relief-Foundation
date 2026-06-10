@@ -3,9 +3,8 @@ import StoriesSection from "@/app/Components/Home/Stories";
 import StoriesHeroSection from "@/app/Components/Stories/StoriesHero";
 
 export const metadata: Metadata = {
-  title: "Field Stories | Uplift Relief Foundation",
-  description:
-    "We rescue injured street dogs and provide free education for underprivileged children across Nagpur. 100% transparent, grassroots NGO.",
+  title: "Field Stories",
+  description: "Real stories from the ground: street dog rescues, education breakthroughs, and community transformation by Uplift Relief Foundation in Nagpur.",
 };
 
 export default function Stories() {

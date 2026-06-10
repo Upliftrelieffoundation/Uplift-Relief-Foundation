@@ -5,8 +5,8 @@ import ImpactBreakdownSection from "@/app/Components/Impact/ImpactBreakdown";
 import CtaSection from "@/app/Components/Home/CTA";
 
 export const metadata: Metadata = {
-  title: "Impact & Transparency | Uplift Relief Foundation",
-  description: "We rescue injured street dogs and provide free education for underprivileged children across Nagpur. 100% transparent, grassroots NGO.",
+  title: "Impact & Transparency",
+  description: "2,400+ animals rescued, 1,850+ children educated. See the measurable impact of Uplift Relief Foundation's work in Nagpur — complete financial transparency.",
 };
 
 export default function Impact() {
