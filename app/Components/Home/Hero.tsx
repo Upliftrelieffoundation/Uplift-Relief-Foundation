@@ -54,7 +54,7 @@ export default function HeroSection() {
               जीवनम् उद्धर। <em>भविष्यं पुनर्लिख।</em>
             </h1>
             <p className="text-gold-bright text-lg font-semibold">
-              Nagpur's Trusted NGO for Street Dog Rescue & Free Child Education
+              Nagpur&apos;s Trusted NGO for Street Dog Rescue & Free Child Education
             </p>
           </div>
 
