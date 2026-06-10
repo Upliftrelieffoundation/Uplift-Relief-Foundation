@@ -17,7 +17,7 @@ const Styles = {
     "h-auto w-full rounded-xl border border-white/10 bg-[#152640] px-5 py-3.5 text-[0.9375rem] text-white shadow-none transition-colors placeholder:text-white/40 focus-visible:border-[#c8a24e] focus-visible:ring-0 focus-visible:ring-offset-0",
 
   amountInput:
-    "h-auto w-full rounded-xl border border-white/10 bg-[#152640] pl-10 pr-4 py-4 text-2xl font-bold text-white shadow-none transition-colors focus-visible:border-[#c8a24e] focus-visible:ring-0 focus-visible:ring-offset-0",
+    "h-auto w-full rounded-xl border border-white/10 bg-[#152640] pl-10 pr-4 py-4 text-2xl font-bold text-white shadow-none transition-colors focus-visible:border-[#c8a24e] focus-visible:ring-0 focus-visible:ring-offset-0 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none",
 
   sectionDivider: "my-8 border-0 border-t border-white/10",
 
@@ -165,7 +165,7 @@ export default function DonateFormSection() {
                         <Input
                           id="donor-email"
                           type="email"
-                          placeholder="johndoe@gmail.com"
+                          placeholder="aarav@gmail.com"
                           className={Styles.input}
                           required
                           value={donorEmail}

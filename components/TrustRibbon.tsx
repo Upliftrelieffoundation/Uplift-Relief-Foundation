@@ -46,6 +46,18 @@ export function TrustRibbon() {
           <Star />
           80G Tax Exempt
         </div>
+        <div className="ribbon-item">
+          <Shield />
+          Govt. Registered
+        </div>
+        <div className="ribbon-item">
+          <CheckCircle />
+          100% Transparent
+        </div>
+        <div className="ribbon-item">
+          <Clock />
+          24/7 Rescue Team
+        </div>
       </div>
     </div>
   );
