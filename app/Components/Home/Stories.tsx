@@ -4,14 +4,14 @@ import { ArrowRight } from "lucide-react";
 
 export default function StoriesSection() {
   return (
-    <section className="bg-bg relative overflow-hidden max-lg:px-5 max-lg:py-10 lg:px-10 lg:py-20" id="stories">
+    <section className="bg-white relative overflow-hidden max-lg:px-5 max-lg:py-10 lg:px-10 lg:py-20" id="stories">
       <div className="wrap">
         <div className="mb-[clamp(3rem,5vw,4rem)] reveal">
           <span className="eyebrow !text-gold-bright">Stories from the Field</span>
-          <h2 className="!text-white">
+          <h2 className="text-navy ">
             From Suffering to <em>Second Chances</em>
           </h2>
-          <p className="body-lg !text-type-2">
+          <p className="body-lg text-[rgba(11,20,37,0.7)]!">
             Every image is a life that found hope because someone chose to
             act.
           </p>
@@ -89,7 +89,7 @@ export default function StoriesSection() {
         <div className="text-center mt-16">
           <Link
             href="/stories"
-            className="btn btn-outline border-white/20 text-white"
+            className="btn btn-outline border-2 border-[rgba(11,20,37,0.15)] text-navy mt-auto self-start hover:border-navy hover:bg-[rgba(11,20,37,0.04)]"
           >
             Read All Stories{" "}
             <ArrowRight />

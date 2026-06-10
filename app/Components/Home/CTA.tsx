@@ -13,7 +13,7 @@ export default function CtaSection() {
         height={1080}
       />
       <div className="wrap">
-        <div className="relative z-2 max-w-145 reveal">
+        <div className="relative z-2 max-w-145 reveal sm:my-10 lg:my-25 md:my-23">
           <span className="text-gold-bright">Make a Real Difference</span>
           <h2 className=" text-white mb-5">
             Don&apos;t Just Watch.
@@ -32,7 +32,7 @@ export default function CtaSection() {
             <Link href="/donate" className="btn btn-ghost">
               Save an Injured Animal Today <ArrowRight />
             </Link>
-            <div className="flex items-center justify-between gap-1.5 text-gray-500 text-[0.75rem] font-medium mt-1">
+            <div className="flex items-center justify-between gap-1.5 text-gray-400 text-[0.75rem] font-medium mt-1">
               <Lock />
               100% Secure · 80G Tax Exempt · Cancel Anytime
             </div>

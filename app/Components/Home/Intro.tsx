@@ -17,7 +17,7 @@ export default function IntroSection() {
                 className="w-full object-cover h-[clamp(400px,50vw,580px)]"
               />
             </div>
-            <div className="absolute max-md:-bottom-4 max-md:right-0 md:-bottom-6 md:-right-4 bg-navy p-5 flex items-center gap-3.5 z-[2] rounded-2xl shadow-[0_12px_40px_rgba(11,20,37,0.15)]">
+            <div className="absolute max-md:-bottom-4 max-md:right-0 md:-bottom-6 md:-right-4 bg-navy p-5 flex items-center gap-3.5 z-2 rounded-2xl shadow-[0_12px_40px_rgba(11,20,37,0.15)]">
               <div className="w-10 h-10 bg-gold flex items-center justify-center rounded-xl shrink-0">
                 <Users className="w-5 h-5 text-bg" />
               </div>
@@ -32,16 +32,16 @@ export default function IntroSection() {
             <h2 className="text-navy">
               A Foundation Built on <em>Compassion</em>
             </h2>
-            <p className="body-lg !text-[rgba(11,20,37,0.7)]">
+            <p className="body-lg text-[rgba(11,20,37,0.7)]!">
               Uplift Relief Foundation is a grassroots NGO based in Nagpur
               dedicated to rescuing street animals and empowering
               underprivileged children through free education and life skills.
             </p>
-            <p className="body-lg !text-[rgba(11,20,37,0.7)]">
+            <p className="body-lg text-[rgba(11,20,37,0.7)]!">
               Founded by young changemakers in 2026, we believe compassion —
               when backed by relentless action — transforms entire communities.
             </p>
-            <Link href="/about" className="flex items-center gap-2 border-2 border-navy hover:border-gold rounded-full w-max py-4 px-5 text-navy hover:text-gold transition mt-4">
+            <Link href="/about" className="btn btn-outline border-2 border-[rgba(11,20,37,0.15)] text-navy mt-8 self-start hover:border-navy hover:bg-[rgba(11,20,37,0.04)]">
               Meet Our Team <ArrowRight />
             </Link>
             <div className="flex flex-wrap max-md:grid max-md:grid-cols-2 gap-10 max-md:gap-6 mt-10">

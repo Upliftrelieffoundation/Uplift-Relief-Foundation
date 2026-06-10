@@ -12,7 +12,7 @@ export default function ImpactSection() {
             <h2 className="!text-navy">
               You Deserve to Know <em>Everything</em>
             </h2>
-            <p className="body-lg !text-[rgba(11,20,37,0.7)]">
+            <p className="body-lg text-[rgba(11,20,37,0.7)]!">
               Every rupee you donate is tracked, audited, and directed to the
               field. We publish annual reports and monthly breakdowns so you
               always know where your money goes.
@@ -37,7 +37,7 @@ export default function ImpactSection() {
             </div>
             <Link
               href="/impact"
-              className="flex items-center gap-2 border rounded-full w-max py-4 px-5 text-primary hover:border-gold hover:text-gold transition mt-4"
+              className="btn btn-outline border-2 border-[rgba(11,20,37,0.15)] text-navy mt-10 self-start hover:border-navy hover:bg-[rgba(11,20,37,0.04)]"
             >
               View Full Impact Report <ArrowRight />
             </Link>
