@@ -12,9 +12,15 @@ export default function ImpactSection() {
       <div className="md:mx-20 lg:mx-20">
         <div className="grid items-center gap-10 max-lg:grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] lg:gap-[clamp(3rem,6vw,5rem)]">
           <div className="reveal">
-            <span className="eyebrow !text-gold-deep">
-              100% Financial Transparency
-            </span>
+            <div className="flex flex-wrap items-center gap-2.5 mb-3">
+              <span className="eyebrow !text-gold-deep !mb-0">
+                100% Financial Transparency
+              </span>
+              <span className="text-gold-deep/40 text-xs">•</span>
+              <span className="eyebrow !text-gold-deep !mb-0">
+                12A &amp; 80G Certified
+              </span>
+            </div>
             <h2 className="!text-navy">
               You Deserve to Know <em>Everything</em>
             </h2>
@@ -26,7 +32,7 @@ export default function ImpactSection() {
             <div className="grid grid-cols-2 gap-4 mt-10">
               <div className="pl-4 border-l-2 border-gold bg-ivory rounded-xl p-6 transition-all duration-[0.3s] ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-gold-deep hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(11,20,37,0.06)]">
                 <strong className="block text-navy leading-none tracking-[-0.02em] font-extrabold text-[clamp(1.75rem,3vw,2.5rem)] font-sans">
-                  <AnimatedCounter target={2400} suffix="+" />
+                  <AnimatedCounter target={1600} suffix="+" />
                 </strong>
                 <span className="block text-[0.75rem] font-semibold text-[rgba(11,20,37,0.5)] uppercase tracking-[0.06em] mt-1">
                   Animals Rescued
@@ -34,26 +40,26 @@ export default function ImpactSection() {
               </div>
               <div className="pl-4 border-l-2 border-gold bg-ivory rounded-xl p-6 transition-all duration-[0.3s] ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-gold-deep hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(11,20,37,0.06)]">
                 <strong className="block text-navy leading-none tracking-[-0.02em] font-extrabold text-[clamp(1.75rem,3vw,2.5rem)] font-sans">
-                  <AnimatedCounter target={1850} suffix="+" />
+                  <AnimatedCounter target={50} suffix="+" />
                 </strong>
                 <span className="block text-[0.75rem] font-semibold text-[rgba(11,20,37,0.5)] uppercase tracking-[0.06em] mt-1">
-                  Children Enrolled
+                  Children Educated
                 </span>
               </div>
               <div className="pl-4 border-l-2 border-gold bg-ivory rounded-xl p-6 transition-all duration-[0.3s] ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-gold-deep hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(11,20,37,0.06)]">
                 <strong className="block text-navy leading-none tracking-[-0.02em] font-extrabold text-[clamp(1.75rem,3vw,2.5rem)] font-sans">
-                  <AnimatedCounter target={38} prefix="₹" suffix="L+" format={false} />
+                  <AnimatedCounter target={100} suffix="+" />
                 </strong>
                 <span className="block text-[0.75rem] font-semibold text-[rgba(11,20,37,0.5)] uppercase tracking-[0.06em] mt-1">
-                  Aid Delivered
+                  Daily Dog Feed
                 </span>
               </div>
               <div className="pl-4 border-l-2 border-gold bg-ivory rounded-xl p-6 transition-all duration-[0.3s] ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-gold-deep hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(11,20,37,0.06)]">
                 <strong className="block text-navy leading-none tracking-[-0.02em] font-extrabold text-[clamp(1.75rem,3vw,2.5rem)] font-sans">
-                  <AnimatedCounter target={48} suffix="+" format={false} />
+                  <AnimatedCounter target={1000} suffix="+" />
                 </strong>
                 <span className="block text-[0.75rem] font-semibold text-[rgba(11,20,37,0.5)] uppercase tracking-[0.06em] mt-1">
-                  Cities Reached
+                  Radium Belts for Dogs
                 </span>
               </div>
             </div>
@@ -65,10 +71,10 @@ export default function ImpactSection() {
             </Link>
           </div>
           <div className="relative reveal reveal-d1">
-            <div className="overflow-hidden rounded-2xl">
+            <div className="overflow-hidden rounded-2xl bg-white">
               <Image
-                src="/images/hero_dog.png"
-                alt="Rescued dog at shelter"
+                src="/images/80G.jpeg"
+                alt="Children with rescued animals - Uplift Relief Foundation"
                 width={800}
                 height={800}
                 loading="lazy"
@@ -83,7 +89,7 @@ export default function ImpactSection() {
                   Govt. Registered NGO
                 </strong>
                 <small className="text-[0.6875rem] text-white/60">
-                  Reg No: MAH/199/2026/NAGPUR
+                  Reg No: MH/2026/1069331
                 </small>
               </div>
             </div>

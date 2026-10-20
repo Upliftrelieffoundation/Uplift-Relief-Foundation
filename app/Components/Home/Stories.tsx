@@ -19,8 +19,8 @@ export default function StoriesSection() {
         <div className="grid gap-4 min-h-[580px] max-lg:grid-cols-1 max-lg:grid-rows-auto lg:grid-cols-[1.4fr_1fr] lg:grid-rows-[1fr_1fr]">
           <div className="relative overflow-hidden rounded-2xl group lg:row-span-2 max-lg:min-h-[400px] reveal">
             <Image
-              src="/images/story_feeding.png"
-              alt="Evening feeding drive"
+              src="/images/bella.jpeg"
+              alt="Bella the rescued dog"
               width={800}
               height={800}
               loading="lazy"
@@ -29,23 +29,21 @@ export default function StoriesSection() {
             />
             <div className="after:content-[''] after:absolute after:inset-0 after:bg-[linear-gradient(to_top,rgba(11,20,37,0.92)_0%,rgba(11,20,37,0.2)_55%,transparent_100%)] pointer-events-none" />
             <div className="absolute bottom-0 left-0 right-0 z-[2] p-[clamp(1.5rem,3vw,2.5rem)]">
-              <span className="block text-[0.625rem] font-bold uppercase tracking-[0.12em] text-gold-bright mb-2">Animal Rescue · Apr 2026</span>
-              <h3 className="!text-white mb-2 text-[clamp(1.125rem,1.8vw,1.5rem)]">A Second Chance for Bella</h3>
-              <p className="text-[rgba(255,255,255,0.45)] text-[0.875rem] leading-[1.65] overflow-hidden line-clamp-3">
-                Found with severe malnutrition and a fractured leg, Bella was
-                nursed back to health over 3 months. Today she lives in a
-                loving home — healthy, happy, and safe.
+              <span className="block text-[0.625rem] font-bold uppercase tracking-[0.12em] text-gold-bright mb-2">Daily feeding · 100+ dogs</span>
+              <h3 className="!text-white mb-2 text-[clamp(1.125rem,1.8vw,1.5rem)]">Every Day, A Meal. Every Day, A Little Hope.</h3>
+              <p className="text-[rgba(255,255,255,0.7)] text-[0.875rem] leading-[1.65] overflow-hidden line-clamp-4">
+                It takes ₹4,500 every day to feed 100+ street dogs. Your contribution can help ensure that no hungry paw is left behind. Sponsor a meal for a day or become a regular feeding sponsor and help us keep their bowls full, every single day.
               </p>
-              <Link href="#" className="inline-flex items-center gap-1.5 text-gold-bright text-[0.75rem] font-semibold mt-3 tracking-[0.03em] no-underline transition-all duration-300 hover:gap-2.5 [&_svg]:w-3 [&_svg]:h-3">
-                Bella&apos;s Rescue Story{" "}
+              <Link href="/donate" className="inline-flex items-center gap-1.5 text-gold-bright text-[0.75rem] font-semibold mt-3 tracking-[0.03em] no-underline transition-all duration-300 hover:gap-2.5 [&_svg]:w-3 [&_svg]:h-3">
+                Become a Feeding Sponsor{" "}
                 <ArrowRight />
               </Link>
             </div>
           </div>
           <div className="relative overflow-hidden rounded-2xl group min-h-[300px] max-lg:min-h-[300px] reveal reveal-d1">
             <Image
-              src="/images/hero_children.png"
-              alt="Children at learning centre"
+              src="/images/student.jpeg"
+              alt="Student learning at centre"
               width={600}
               height={400}
               loading="lazy"
@@ -54,23 +52,21 @@ export default function StoriesSection() {
             />
             <div className="after:content-[''] after:absolute after:inset-0 after:bg-[linear-gradient(to_top,rgba(11,20,37,0.92)_0%,rgba(11,20,37,0.2)_55%,transparent_100%)] pointer-events-none" />
             <div className="absolute bottom-0 left-0 right-0 z-[2] p-[clamp(1.5rem,3vw,2.5rem)]">
-              <span className="block text-[0.625rem] font-bold uppercase tracking-[0.12em] text-gold-bright mb-2">Education · Mar 2026</span>
-              <h3 className="!text-white mb-2 text-[clamp(1.125rem,1.8vw,1.5rem)]">Rohan&apos;s Journey to Engineering</h3>
-              <p className="text-[rgba(255,255,255,0.45)] text-[0.875rem] leading-[1.65] overflow-hidden line-clamp-3">
-                After joining our free tuition centre in 2026, Rohan secured a
-                scholarship for engineering. A cycle of poverty — broken
-                forever.
+              <span className="block text-[0.625rem] font-bold uppercase tracking-[0.12em] text-gold-bright mb-2">Child Nutrition · Education</span>
+              <h3 className="!text-white mb-2 text-[clamp(1.125rem,1.8vw,1.5rem)]">Sponsor a Meal. Nourish a Young Mind.</h3>
+              <p className="text-[rgba(255,255,255,0.7)] text-[0.875rem] leading-[1.65] overflow-hidden line-clamp-3">
+                Every child deserves access to nutritious meals and the opportunity to learn, grow, and dream. With just ₹2,500 per student per week, you can help provide essential meal support and make a meaningful difference in a child&apos;s life.
               </p>
-              <Link href="#" className="inline-flex items-center gap-1.5 text-gold-bright text-[0.75rem] font-semibold mt-3 tracking-[0.03em] no-underline transition-all duration-300 hover:gap-2.5 [&_svg]:w-3 [&_svg]:h-3">
-                Rohan&apos;s Success Story{" "}
+              <Link href="/donate" className="inline-flex items-center gap-1.5 text-gold-bright text-[0.75rem] font-semibold mt-3 tracking-[0.03em] no-underline transition-all duration-300 hover:gap-2.5 [&_svg]:w-3 [&_svg]:h-3">
+                Become a Meal Sponsor{" "}
                 <ArrowRight />
               </Link>
             </div>
           </div>
           <div className="relative overflow-hidden rounded-2xl group min-h-[300px] max-lg:min-h-[300px] reveal reveal-d2">
             <Image
-              src="/images/hero_dog.png"
-              alt="Rescued puppy"
+              src="/images/radium belt.jpeg"
+              alt="Street dog wearing reflective radium belt"
               width={600}
               height={400}
               loading="lazy"
@@ -79,14 +75,13 @@ export default function StoriesSection() {
             />
             <div className="after:content-[''] after:absolute after:inset-0 after:bg-[linear-gradient(to_top,rgba(11,20,37,0.92)_0%,rgba(11,20,37,0.2)_55%,transparent_100%)] pointer-events-none" />
             <div className="absolute bottom-0 left-0 right-0 z-[2] p-[clamp(1.5rem,3vw,2.5rem)]">
-              <span className="block text-[0.625rem] font-bold uppercase tracking-[0.12em] text-gold-bright mb-2">Rescue · Feb 2026</span>
-              <h3 className="!text-white mb-2 text-[clamp(1.125rem,1.8vw,1.5rem)]">Midnight Rescue: 5 Puppies Saved</h3>
-              <p className="text-[rgba(255,255,255,0.45)] text-[0.875rem] leading-[1.65] overflow-hidden line-clamp-3">
-                Our team rushed out at 2 AM in monsoon rains. All 5 puppies —
-                safe, vaccinated, and thriving.
+              <span className="block text-[0.625rem] font-bold uppercase tracking-[0.12em] text-gold-bright mb-2">Accident Prevention · Night Safety</span>
+              <h3 className="!text-white mb-2 text-[clamp(1.125rem,1.8vw,1.5rem)]">Make Them Shine. Help Them Stay Safe.</h3>
+              <p className="text-[rgba(255,255,255,0.7)] text-[0.875rem] leading-[1.65] overflow-hidden line-clamp-3">
+                Every week, we aim to distribute 1,000+ reflective radium belts to street animals, helping them stay visible to drivers after dark and reducing the risk of road accidents. With a weekly budget of ₹75,000, your support can help protect vulnerable animals and make our streets safer for every paw.
               </p>
-              <Link href="#" className="inline-flex items-center gap-1.5 text-gold-bright text-[0.75rem] font-semibold mt-3 tracking-[0.03em] no-underline transition-all duration-300 hover:gap-2.5 [&_svg]:w-3 [&_svg]:h-3">
-                Midnight Rescue Story{" "}
+              <Link href="/donate" className="inline-flex items-center gap-1.5 text-gold-bright text-[0.75rem] font-semibold mt-3 tracking-[0.03em] no-underline transition-all duration-300 hover:gap-2.5 [&_svg]:w-3 [&_svg]:h-3">
+                Sponsor Radium Belts{" "}
                 <ArrowRight />
               </Link>
             </div>

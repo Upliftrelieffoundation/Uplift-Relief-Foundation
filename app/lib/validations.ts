@@ -70,7 +70,9 @@ export const contactSchema = z.object({
     .regex(
       /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/,
       "Invalid PAN format (e.g. ABCDE1234F)",
-    ),
+    )
+    .optional()
+    .or(z.literal("")),
 });
 
 export type PaymentFormData = z.output<typeof paymentSchema>;

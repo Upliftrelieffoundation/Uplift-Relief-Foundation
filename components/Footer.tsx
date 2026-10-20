@@ -71,7 +71,7 @@ export function Footer() {
               </li>
               <li>
                 <MapPin />
-                <span>Nagpur, Maharashtra, India</span>
+                <span>Maharashtra, India</span>
               </li>
             </ul>
           </div>

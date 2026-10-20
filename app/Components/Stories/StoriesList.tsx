@@ -18,67 +18,73 @@ export default function StoriesList() {
         <div className="stories-mosaic">
           <div className="s-card s-card--featured reveal">
             <Image
-              src="/images/story_feeding.png"
-              alt="Evening feeding drive"
+              src="/images/bella.jpeg"
+              alt="Bella the rescued dog"
               width={800}
               height={800}
               loading="lazy"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
             <div className="s-body">
-              <span className="s-tag">Animal Rescue · Apr 2026</span>
-              <h3>A Second Chance for Bella</h3>
+              <span className="s-tag">Daily feeding · 100+ dogs</span>
+              <h3>Every Day, A Meal. Every Day, A Little Hope.</h3>
               <p>
-                Found with severe malnutrition and a fractured leg, Bella was
-                nursed back to health over 3 months. Today she lives in a
-                loving home — healthy, happy, and safe.
+                It takes ₹4,500 every day to feed 100+ street dogs. Your
+                contribution can help ensure that no hungry paw is left behind.
+                Sponsor a meal for a day or become a regular feeding sponsor and
+                help us keep their bowls full, every single day.
               </p>
-              <Link href="#" className="s-link">
-                Read Full Story{" "}
+              <Link href="/donate" className="s-link">
+                Become a Feeding Sponsor{" "}
                 <ArrowRight />
               </Link>
             </div>
           </div>
           <div className="s-card reveal reveal-d1">
             <Image
-              src="/images/hero_children.png"
-              alt="Children at learning centre"
+              src="/images/student.jpeg"
+              alt="Student learning at centre"
               width={600}
               height={400}
               loading="lazy"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
             <div className="s-body">
-              <span className="s-tag">Education · Mar 2026</span>
-              <h3>Rohan&apos;s Journey to Engineering</h3>
+              <span className="s-tag">Child Nutrition · Education</span>
+              <h3>Sponsor a Meal. Nourish a Young Mind.</h3>
               <p>
-                After joining our free tuition centre in 2026, Rohan secured a
-                scholarship for engineering. A cycle of poverty — broken forever.
+                Every child deserves access to nutritious meals and the
+                opportunity to learn, grow, and dream. With just ₹2,500 per
+                student per week, you can help provide essential meal support
+                and make a meaningful difference in a child&apos;s life.
               </p>
-              <Link href="#" className="s-link">
-                Read Full Story{" "}
+              <Link href="/donate" className="s-link">
+                Become a Meal Sponsor{" "}
                 <ArrowRight />
               </Link>
             </div>
           </div>
           <div className="s-card reveal reveal-d2">
             <Image
-              src="/images/hero_dog.png"
-              alt="Rescued puppy"
+              src="/images/radium belt.jpeg"
+              alt="Street dog wearing reflective radium belt"
               width={600}
               height={400}
               loading="lazy"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
             <div className="s-body">
-              <span className="s-tag">Rescue · Feb 2026</span>
-              <h3>Midnight Rescue: 5 Puppies Saved</h3>
+              <span className="s-tag">Accident Prevention · Night Safety</span>
+              <h3>Make Them Shine. Help Them Stay Safe.</h3>
               <p>
-                Our team rushed out at 2 AM in monsoon rains. All 5 puppies — safe,
-                vaccinated, and thriving.
+                Every week, we aim to distribute 1,000+ reflective radium belts to
+                street animals, helping them stay visible to drivers after dark
+                and reducing the risk of road accidents. With a weekly budget of
+                ₹75,000, your support can help protect vulnerable animals and make
+                our streets safer for every paw.
               </p>
-              <Link href="#" className="s-link">
-                Read Full Story{" "}
+              <Link href="/donate" className="s-link">
+                Sponsor Radium Belts{" "}
                 <ArrowRight />
               </Link>
             </div>

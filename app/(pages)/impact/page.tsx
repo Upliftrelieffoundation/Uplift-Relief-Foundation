@@ -6,7 +6,7 @@ import CtaSection from "@/app/Components/Home/CTA";
 
 export const metadata: Metadata = {
   title: "Impact & Transparency",
-  description: "2,400+ animals rescued, 1,850+ children educated. See the measurable impact of Uplift Relief Foundation's work in Nagpur — complete financial transparency.",
+  description: "1,600+ animals rescued, 50+ children educated. See the measurable impact of Uplift Relief Foundation's work across India — complete financial transparency.",
 };
 
 export default function Impact() {

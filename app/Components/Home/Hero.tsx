@@ -8,17 +8,17 @@ const data = [
   {
     id: 1,
     title: "Animals Rescued",
-    value: "2,400+",
+    value: "1,600+",
   },
   {
     id: 2,
     title: "Children Educated",
-    value: "1,850+",
+    value: "50+",
   },
   {
     id: 3,
     title: "Volunteers",
-    value: "500+",
+    value: "215+",
   },
 ];
 
@@ -31,7 +31,7 @@ export default function HeroSection() {
 
       <Image
         src="/images/hero_split.png"
-        alt="Volunteer rescuing a street dog in Nagpur"
+        alt="Volunteer rescuing a street animal"
         width={1920}
         height={1080}
         priority
@@ -43,7 +43,7 @@ export default function HeroSection() {
           <Badge variant="default" className="gap-2 bg-white/5 p-3 text-sm">
             <span className="h-1.5 w-1.5 rounded-full bg-gold-bright shadow-[0_0_8px_rgba(221,185,99,0.5)]" />
             <span className="text-white/90">
-              Registered NGO · Nagpur, India
+              Registered NGO · India
             </span>
           </Badge>
         </div>
@@ -54,12 +54,12 @@ export default function HeroSection() {
               जीवनम् उद्धर। <em>भविष्यं पुनर्लिख।</em>
             </h1>
             <p className="text-gold-bright text-lg font-semibold">
-              Nagpur&apos;s Trusted NGO for Street Dog Rescue & Free Child Education
+              Trusted NGO for Street Animal Rescue & Free Child Education
             </p>
           </div>
 
           <p className="mb-10 max-w-120 text-[clamp(0.9375rem,1.3vw,1.0625rem)] leading-[1.85] text-white/50">
-            We are a grassroots NGO in Nagpur running 24/7 street dog rescues
+            We are a grassroots NGO running 24/7 street animal rescues
             and free education centres for underprivileged children — because
             every life deserves a fighting chance.
           </p>

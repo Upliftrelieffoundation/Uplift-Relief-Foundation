@@ -4,7 +4,7 @@ import DonateFormSection from "@/app/Components/Donate/DonateForm";
 
 export const metadata: Metadata = {
   title: "Donate",
-  description: "Support street dog rescue and free child education in Nagpur. Donate to Uplift Relief Foundation — 100% transparent NGO. Monthly or one-time giving.",
+  description: "Support street animal rescue and free child education across India. Donate to Uplift Relief Foundation — 100% transparent NGO. Monthly or one-time giving.",
 };
 
 export default function Donate() {

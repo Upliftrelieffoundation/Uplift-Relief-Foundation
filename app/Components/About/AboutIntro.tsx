@@ -22,7 +22,7 @@ export default function AboutIntroSection() {
                 <Users />
               </div>
               <div>
-                <strong>500+</strong>
+                <strong>215+</strong>
                 <span>Active Volunteers</span>
               </div>
             </div>
@@ -33,9 +33,9 @@ export default function AboutIntroSection() {
               A Foundation Built on <em>Compassion</em>
             </h2>
             <p className="body-lg">
-              Uplift Relief Foundation is a grassroots NGO based in Nagpur
-              dedicated to rescuing street animals and empowering
-              underprivileged children through free education and life skills.
+              Uplift Relief Foundation is a grassroots NGO dedicated to
+              rescuing street animals and empowering underprivileged children
+              through free education and life skills.
             </p>
             <p className="body-lg">
               Founded by young changemakers in 2026, we believe compassion —

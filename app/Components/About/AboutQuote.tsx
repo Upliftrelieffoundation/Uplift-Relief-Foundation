@@ -17,7 +17,7 @@ export default function AboutQuoteSection() {
           &quot;I never thought a small donation could change so many lives. Uplift
           Relief showed me it can.&quot;
         </blockquote>
-        <cite>— Priya M., Donor &amp; Volunteer, Nagpur</cite>
+        <cite>— Priya M., Donor &amp; Volunteer</cite>
       </div>
     </section>
   );

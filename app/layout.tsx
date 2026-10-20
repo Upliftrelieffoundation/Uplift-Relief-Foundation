@@ -12,13 +12,13 @@ export const metadata: Metadata = {
 	metadataBase: new URL(baseUrl),
 	title: {
 		default: "Uplift Relief Foundation | Street Dog Rescue & Child Education",
-		template: "%s | Uplift Relief Foundation Nagpur",
+		template: "%s | Uplift Relief Foundation",
 	},
 	description:
-		"We rescue injured street dogs and provide free education for underprivileged children across Nagpur. 100% transparent, grassroots NGO.",
+		"We rescue injured street animals and provide free education for underprivileged children across India. 100% transparent, grassroots NGO.",
 	keywords: [
-		"NGO Nagpur",
-		"Animal Rescue Nagpur",
+		"NGO India",
+		"Animal Rescue India",
 		"Street Dog Rescue",
 		"Free Education for Children",
 		"Underprivileged Children Education",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
 		siteName: "Uplift Relief Foundation",
 		title: "Uplift Relief Foundation | Rescue. Educate. Transform.",
 		description:
-			"We rescue injured street dogs and provide free education for underprivileged children across Nagpur. 100% transparent, grassroots NGO.",
+			"We rescue injured street animals and provide free education for underprivileged children across India. 100% transparent, grassroots NGO.",
 		images: [
 			{
 				url: `${baseUrl}/images/og-image.jpg`, // Replace with actual default OG image later
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
 		card: "summary_large_image",
 		title: "Uplift Relief Foundation",
 		description:
-			"We rescue injured street dogs and provide free education for underprivileged children across Nagpur.",
+			"We rescue injured street animals and provide free education for underprivileged children across India.",
 		images: [`${baseUrl}/images/og-image.jpg`], // Replace with actual image
 	},
 	robots: {
@@ -81,7 +81,7 @@ const organizationSchema = {
 	url: baseUrl,
 	logo: `${baseUrl}/images/logo.png`, // Update when you have an actual logo path
 	description:
-		"We rescue injured street dogs and provide free education for underprivileged children across Nagpur. 100% transparent, grassroots NGO.",
+		"We rescue injured street animals and provide free education for underprivileged children across India. 100% transparent, grassroots NGO.",
 	sameAs: [
 		"https://www.instagram.com/upliftfoundation", // Update links as needed
 		"https://www.facebook.com/upliftfoundation",

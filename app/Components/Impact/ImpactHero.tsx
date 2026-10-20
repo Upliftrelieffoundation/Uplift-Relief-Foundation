@@ -15,7 +15,7 @@ export default function ImpactHeroSection() {
         <h1>
           Our <em>Impact</em>
         </h1>
-        <p>100% Financial Transparency</p>
+        <p>100% Financial Transparency · 12A &amp; 80G Certified</p>
       </div>
     </header>
   );

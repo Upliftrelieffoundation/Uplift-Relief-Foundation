@@ -16,7 +16,7 @@ export default function DonateHeroSection() {
           Support <em>Us</em>
         </h1>
         <p>
-          Become a monthly member or make a one-time donation to help Nagpur&apos;s
+          Become a monthly member or make a one-time donation to help India&apos;s
           street animals &amp; kids.
         </p>
       </div>

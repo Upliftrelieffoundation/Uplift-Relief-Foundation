@@ -6,7 +6,7 @@ import AboutHeroSection from '@/app/Components/About/AboutHero';
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: "Learn about Uplift Relief Foundation — a grassroots NGO in Nagpur rescuing street dogs and providing free education for underprivileged children since 2026.",
+  description: "Learn about Uplift Relief Foundation — a grassroots NGO rescuing street animals and providing free education for underprivileged children since 2026.",
 };
 
 export default function About() {

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CheckCheck, ArrowRight } from "lucide-react";
+import { CheckCheck, ArrowRight, Info } from "lucide-react";
 
 const causes = [
   {
@@ -10,13 +10,14 @@ const causes = [
     alt: "Street dog rescue",
     title: "Save an Injured Animal",
     description:
-      "Every day, dozens of street dogs across Nagpur suffer from road accidents, abuse, and preventable disease. Our 24/7 rescue team responds to emergency calls, providing on-site first aid, transport to veterinary partners, life-saving surgeries, and long-term rehabilitation. We also run regular anti-rabies vaccination camps and promote adoption over purchase.",
+      "Every day, dozens of street animals across India suffer from road accidents, abuse, and preventable disease. Our 24/7 rescue team responds to emergency calls, providing on-site first aid, transport to veterinary partners, life-saving surgeries, and long-term rehabilitation. We also run regular anti-rabies vaccination camps and promote adoption over purchase.",
     points: [
       "Emergency medical response",
       "Anti-rabies vaccination drives",
       "Adoption & foster care",
     ],
     cta: "Support Animal Rescue",
+    info: "/work#animal",
   },
   {
     id: "education",
@@ -25,13 +26,14 @@ const causes = [
     alt: "Free education centre",
     title: "Sponsor a Child's Education",
     description:
-      "Poverty forces brilliant young minds out of school across Nagpur's underserved communities. Our free education centres provide daily tuition, school supplies, uniforms, nutritious meals, and digital literacy classes. We also offer one-on-one mentorship and career guidance to help each child build a path out of poverty.",
+      "Poverty forces brilliant young minds out of school across India's underserved communities. Our free education centres provide daily tuition, school supplies, uniforms, nutritious meals, and digital literacy classes. We also offer one-on-one mentorship and career guidance to help each child build a path out of poverty.",
     points: [
       "Free learning centres",
       "Books, uniforms & digital literacy",
       "Career mentorship",
     ],
     cta: "Sponsor a Child Today",
+    info: "/work#education",
   },
 ];
 
@@ -52,7 +54,7 @@ export default function WorkCausesSection() {
             <em>One Heart.</em>
           </h2>
           <p className="text-[rgba(11,20,37,0.7)] text-[0.9375rem] leading-[1.75] max-w-180">
-            Uplift Relief Foundation runs two core programs in Nagpur, India: a
+            Uplift Relief Foundation runs two core programs across India: a
             24/7 street animal rescue and rehabilitation operation, and free
             education centres for children from slums and low-income families.
             Every donation — monthly or one-time — funds life-saving medical
@@ -102,13 +104,22 @@ export default function WorkCausesSection() {
                   ))}
                 </ul>
 
-                <Link
-                  href="/donate"
-                  className="btn btn-outline border-[rgba(11,20,37,0.15)] text-navy mt-auto self-start hover:border-navy hover:bg-[rgba(11,20,37,0.04)]"
-                >
-                  {cause.cta}
-                  <ArrowRight />
-                </Link>
+                <div className="mt-auto flex flex-wrap gap-3">
+                  <Link
+                    href="/donate"
+                    className="btn btn-outline border-[rgba(11,20,37,0.15)] text-navy hover:border-navy hover:bg-[rgba(11,20,37,0.04)]"
+                  >
+                    {cause.cta}
+                    <ArrowRight />
+                  </Link>
+                  <Link
+                    href={cause.info}
+                    className="btn btn-ghost border border-[rgba(11,20,37,0.10)] text-navy/70 hover:text-navy hover:border-navy hover:bg-[rgba(11,20,37,0.04)] gap-1.5"
+                  >
+                    <Info className="w-4 h-4" />
+                    More Info
+                  </Link>
+                </div>
               </div>
             </div>
           ))}
