@@ -2,8 +2,12 @@ import Login from "@/app/Components/Forms/Login";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Login | Uplift Foundation",
-  description: "Login to your Uplift Foundation account",
+  title: "Login | Uplift Relief Foundation",
+  description: "Login to your Uplift Relief Foundation account",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function LoginPage() {

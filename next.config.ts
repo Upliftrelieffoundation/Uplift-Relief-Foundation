@@ -16,9 +16,36 @@ const nextConfig: NextConfig = {
       headers: [
         {
           key: "Content-Security-Policy",
-          value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https://lh3.googleusercontent.com https://*.supabase.co; connect-src 'self' https://*.supabase.co;",
+          value:
+            "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https://lh3.googleusercontent.com https://*.supabase.co; connect-src 'self' https://*.supabase.co;",
         },
       ],
+    },
+  ],
+  redirects: async () => [
+    // Non-www domain redirect to canonical production domain
+    {
+      source: "/:path*",
+      has: [
+        {
+          type: "host",
+          value: "upliftrelieffoundation.org",
+        },
+      ],
+      destination: "https://www.upliftrelieffoundation.org/:path*",
+      permanent: true,
+    },
+    // Vercel deployment domain fallback redirect to canonical production domain
+    {
+      source: "/:path*",
+      has: [
+        {
+          type: "host",
+          value: "uplift-relief-foundation.vercel.app",
+        },
+      ],
+      destination: "https://www.upliftrelieffoundation.org/:path*",
+      permanent: true,
     },
   ],
 };

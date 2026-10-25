@@ -2,8 +2,12 @@ import Register from "@/app/Components/Forms/Register";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Register | Uplift Foundation",
-  description: "Create an account for Uplift Foundation",
+  title: "Register | Uplift Relief Foundation",
+  description: "Create an account for Uplift Relief Foundation",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RegisterPage() {

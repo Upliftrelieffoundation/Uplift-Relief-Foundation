@@ -1,56 +1,45 @@
-import { MetadataRoute } from 'next'
+import type { MetadataRoute } from "next";
+import { SITE_URL } from "@/lib/site-config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.upliftfoundation.org'
-  
+  const lastModified = new Date();
+
   return [
     {
-      url: `${baseUrl}`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 1,
+      url: SITE_URL,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 1.0,
     },
     {
-      url: `${baseUrl}/about`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
+      url: `${SITE_URL}/about`,
+      lastModified,
+      changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/work`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
+      url: `${SITE_URL}/work`,
+      lastModified,
+      changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/impact`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
+      url: `${SITE_URL}/impact`,
+      lastModified,
+      changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/stories`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
+      url: `${SITE_URL}/stories`,
+      lastModified,
+      changeFrequency: "weekly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/donate`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
+      url: `${SITE_URL}/donate`,
+      lastModified,
+      changeFrequency: "yearly",
       priority: 0.9,
     },
-    {
-      url: `${baseUrl}/login`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/register`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.5,
-    },
-  ]
+  ];
 }

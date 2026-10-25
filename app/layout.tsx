@@ -5,11 +5,10 @@ import { Footer } from "@/components/Footer";
 import { GlobalScrollObserver } from "@/components/GlobalScrollObserver";
 import React from "react";
 
-const baseUrl =
-	process.env.NEXT_PUBLIC_BASE_URL || "https://www.upliftfoundation.org";
+import { SITE_URL } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-	metadataBase: new URL(baseUrl),
+	metadataBase: new URL(SITE_URL),
 	title: {
 		default: "Uplift Relief Foundation | Street Dog Rescue & Child Education",
 		template: "%s | Uplift Relief Foundation",
@@ -36,14 +35,14 @@ export const metadata: Metadata = {
 	openGraph: {
 		type: "website",
 		locale: "en_US",
-		url: baseUrl,
+		url: SITE_URL,
 		siteName: "Uplift Relief Foundation",
 		title: "Uplift Relief Foundation | Rescue. Educate. Transform.",
 		description:
 			"We rescue injured street animals and provide free education for underprivileged children across India. 100% transparent, grassroots NGO.",
 		images: [
 			{
-				url: `${baseUrl}/images/og-image.jpg`, // Replace with actual default OG image later
+				url: `${SITE_URL}/images/og-image.jpg`, // Replace with actual default OG image later
 				width: 1200,
 				height: 630,
 				alt: "Uplift Relief Foundation - Rescue, Educate, Transform",
@@ -55,7 +54,7 @@ export const metadata: Metadata = {
 		title: "Uplift Relief Foundation",
 		description:
 			"We rescue injured street animals and provide free education for underprivileged children across India.",
-		images: [`${baseUrl}/images/og-image.jpg`], // Replace with actual image
+		images: [`${SITE_URL}/images/og-image.jpg`], // Replace with actual image
 	},
 	robots: {
 		index: true,
@@ -69,7 +68,7 @@ export const metadata: Metadata = {
 		},
 	},
 	alternates: {
-		canonical: baseUrl,
+		canonical: SITE_URL,
 	},
 };
 
@@ -78,8 +77,8 @@ const organizationSchema = {
 	"@context": "https://schema.org",
 	"@type": "NGO",
 	name: "Uplift Relief Foundation",
-	url: baseUrl,
-	logo: `${baseUrl}/images/logo.png`, // Update when you have an actual logo path
+	url: SITE_URL,
+	logo: `${SITE_URL}/images/logo.png`, // Update when you have an actual logo path
 	description:
 		"We rescue injured street animals and provide free education for underprivileged children across India. 100% transparent, grassroots NGO.",
 	sameAs: [
